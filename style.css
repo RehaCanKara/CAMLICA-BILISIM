@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; 
+    padding: 0;
+    background-color: #004d40;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    background-color: #004d40; 
+    text-align: center; /* Menü linklerini ortaya hizalar */
+}
+
+/* Menü İçindeki Her Bir Maddeyi Yan Yana Hizalama */
+nav ul li {
+    display: inline-block; /* Liste öğelerini yan yana dizer */
+}
+
+/* Menü Bağlantıları (Linkler) */
+nav ul li a {
+    display: block;
+    color: rgb(245, 245, 245);
+    text-align: center;
+    padding: 14px 16px; /* Boşluk verir */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+/* Menü Linklerinin Üzerine Gelince Renk Değişimi */
+nav ul li a:hover {
+    background-color: #ffcc00; /* Sarı arka plan */
+    color: #f2f0f0; /* Metin rengini koyu yapar */
+}
+
+/* Ana Başlık Alanı Stili */
+header {
+    background-color: #ffffff;
+    padding: 30px 0;
+    text-align: center; /* Başlıkları ortaya hizalar */
+    border-bottom: 2px solid #ccc;
+}
+
+header h1 {
+    color: #004d40; /* Koyu yeşil başlık rengi */
+    margin-bottom: 5px;
+}
+
+.project-image img {
+    display: block; 
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; 
+}
+
+.project-description h2 {
+    text-align: center;
+
+
+}
