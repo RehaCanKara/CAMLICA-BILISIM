@@ -12,39 +12,38 @@ nav ul {
     padding: 0;
     overflow: hidden; 
     background-color: #004d40; 
-    text-align: center; /* Menü linklerini ortaya hizalar */
+    text-align: center; 
 }
 
-/* Menü İçindeki Her Bir Maddeyi Yan Yana Hizalama */
+
 nav ul li {
-    display: inline-block; /* Liste öğelerini yan yana dizer */
+    display: inline-block; 
 }
 
-/* Menü Bağlantıları (Linkler) */
+
 nav ul li a {
     display: block;
     color: rgb(245, 245, 245);
     text-align: center;
-    padding: 14px 16px; /* Boşluk verir */
-    text-decoration: none; /* Alt çizgiyi kaldırır */
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-/* Menü Linklerinin Üzerine Gelince Renk Değişimi */
 nav ul li a:hover {
-    background-color: #ffcc00; /* Sarı arka plan */
-    color: #f2f0f0; /* Metin rengini koyu yapar */
+    background-color: #ffcc00; 
+    color: #f2f0f0; 
 }
 
-/* Ana Başlık Alanı Stili */
+
 header {
     background-color: #ffffff;
     padding: 30px 0;
-    text-align: center; /* Başlıkları ortaya hizalar */
+    text-align: center; 
     border-bottom: 2px solid #ccc;
 }
 
 header h1 {
-    color: #004d40; /* Koyu yeşil başlık rengi */
+    color: #004d40; 
     margin-bottom: 5px;
 }
 
