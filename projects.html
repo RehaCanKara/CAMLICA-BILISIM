@@ -1,6 +1,15 @@
-<main>
+Gönderdiğiniz projects.html (Projeler) kod parçasında da ciddi HTML yapısal hataları ve yanlış yerleştirilmiş etiketler mevcuttur. Özellikle <head> etiketinin <body> içinde olması ve liste etiketlerinin (<li>) yanlış kullanımı sitenizin doğru görüntülenmesini engelliyordur.İşte size, gönderdiğiniz kodu tüm yapısal hatalardan arındırılmış ve doğru bir projects.html dosyası oluşturacak şekilde düzenlenmiş hali:🛠️ projects.html (Düzeltilmiş Kod)Bu kod, önceki hatalı yapıları düzeltti, <head> bloğunu olması gereken yere (en üste) taşıdı ve projeler listesini daha uygun bir şekilde (<div> ve <p> kullanarak) yapılandırdı.HTML<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projelerimiz</title>
     
-     <header>
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    
+    <header>
         <nav>
             <ul>
                 <li><a href="index.html">Ana Sayfa</a></li>
@@ -10,56 +19,60 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        
+        <h2>Şirketimizin Projeleri</h2>
+        
+        <section>
+            
+            <hr> 
+            <div class="project-item">
+                <div class="project-description">
+                    <p>Başta bilişim teknolojileri olmak üzere çeşitli alanlarda birçok projeye imza attık. Cumhurbaşkanı tarafından verilen ödülle şereflendirilen bu uygulamamız ile hızımıza hız kattık. Şimdiye kadar ki projelerimizden en önemlisi ve en değerlisi denebilecek olan son derece yerli ve milli yapay zeka uygulamamızdır.</p>
+                </div>
+                <br>
+                <div class="project-image">
+                    <img src="proje1.png" alt="Yapay Zeka Uygulaması Ekran Görüntüsü"> 
+                </div>
+            </div>
+            
+            <br>
+            <hr> 
+            <div class="project-item">
+                <div class="project-description">
+                    <p>Sadece bu proje değil, birçok farklı sektörde çeşitli ölçeklerde projeler gerçekleştirdik. Bir diğer büyük projemiz ise 2026 yılında tamamladığımız e-ticaret platformudur. Bu platform ile beraber güvenli bir ticaret ortamını sizlere sunuyoruz. Bu kurumsal projemiz, müşterilerimizin dijital varlıklarını güçlendirmelerine yardımcı oldu. Modern tasarım ve kullanıcı dostu arayüzü ile sektörde fark yarattık. Projede kullandığımız en son teknolojiler ve yenilikçi çözümler, müşterilerimizin beklentilerini aşmamızı sağladık.</p>
+                </div>
+                <br>
+                <div class="project-image">
+                    <img src="resim22.png" alt="E-ticaret Platformu Ekran Görüntüsü">
+                </div>
+            </div>
+            
+            <br>
+            <hr> 
+            <div class="project-item">
+                <div class="project-description">
+                    <p>Çalışmalarımızı sürekli olarak genişletiyor ve yeni projelerle sektördeki yerimizi sağlamlaştırıyoruz. Yeni projelerimizden biri olan Mobil Oyun ise 2027 yılında piyasaya sürülecektir. 'Camcity' adlı bu oyun, kullanıcıların şehir kurma ve yönetme becerilerini test etmelerine olanak sağlıyor. Oyuncular, kendi şehirlerini inşa ederken stratejik kararlar alarak kaynaklarını yönetiyor ve şehrin büyümesini sağlıyor. Camcity, gerçekçi grafikler ve etkileşimli oyun mekanikleri ile oyunculara sürükleyici bir deneyim sunmayı hedefliyor. Bu proje ile birlikte, oyun sektöründe de adımızı duyurmayı planlıyoruz.</p>
+                </div>
+                <br>
+                <div class="project-image">
+                    <img src="resim33.png" alt="Mobil Oyun Ekran Görüntüsü"> 
+                </div>
+            </div>
+            
+            <br>
+            <hr> 
+            <div class="project-item"> 
+                <div class="project-description">
+                    <p>Görüş ve önerileriniz için bizimle iletişime geçebilirsiniz.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
     
-    <div class="project-description">
-             <h2> <p>Şirketimizin Projeleri</p></h2>
-        <form id="contactForm">
+    <br> 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-    <section>
-
-        <div class="project-item">
-            <div class="project-description">
-                <li>Başta bilişim teknolojileri olmak üzere çeşitli alanlarda birçok projeye imza attık. Cumhurbaşkanı tarafından verilen ödülle şereflendirilen bu uygulamamız ile hızımıza hız kattık.
-                    Şimdiye kadar ki projelerimizden en önemlisi ve en değerlisi denebilecek olan son derece yerli ve milli yapay zeka uygulamamızdır.</li>
-            </div>
-            <br><br>
-            <div class="project-image">
-                <img src="proje1.png" alt="Kurumsal Web Sitesi Ekran Görüntüsü"> 
-            </div>
-        </div>
-         <br><br>
-        <hr> <div class="project-item">
-            <div class="project-description">
-                <li>  <l>Sadece bu proje değil, birçok farklı sektörde çeşitli ölçeklerde projeler gerçekleştirdik. Bir diğer büyük projemiz ise 2026 yılında tamamladığımız e-ticaret platformudur. Bu platform ile beraber güvenli bir ticaret ortamını sizlere sunuyoruz. Bu kurumsal projemiz, müşterilerimizin dijital varlıklarını güçlendirmelerine yardımcı oldu. Modern tasarım ve kullanıcı dostu arayüzü ile sektörde fark yarattık. Projede kullandığımız en son teknolojiler ve yenilikçi çözümler, müşterilerimizin beklentilerini aşmamızı sağladık.</l>  </li>
-            </div>
-             <br><br>
-            <div class="project-image">
-                <img src="resim22.png" alt="İkinci Proje Ekran Görüntüsü">
-            </div>
-        </div>
-         <br><br>
-        <hr> <div class="project-item">
-        <div class="project-image">
-            <div class="project-description">
-                <li>Çalışmalarımızı sürekli olarak genişletiyor ve yeni projelerle sektördeki yerimizi sağlamlaştırıyoruz. Yeni projelerimizden biri olan Mobil Oyun ise 2027 yılında piyasaya sürülecektir. 'Camcity' adlı bu oyun, kullanıcıların şehir kurma ve yönetme becerilerini test etmelerine olanak sağlıyor. Oyuncular, kendi şehirlerini inşa ederken stratejik kararlar alarak kaynaklarını yönetiyor ve şehrin büyümesini sağlıyor. Camcity, gerçekçi grafikler ve etkileşimli oyun mekanikleri ile oyunculara sürükleyici bir deneyim sunmayı hedefliyor. Bu proje ile birlikte, oyun sektöründe de adımızı duyurmayı planlıyoruz.</li>
-            </div>
-             <br><br>
-            <img src="resim33.png" alt="Üçüncü Proje Ekran Görüntüsü">  
-            </div>        
-          <br><br>
-        <hr> <div class="project-item"> 
-        <div class="project-description">
-                <p>Görüş ve önerileriniz için bizimle iletişime geçebilirsiniz.</p>
-     </div>
-    </section>
-
-    <br>
-
-</main>
+</body>
+</html>
