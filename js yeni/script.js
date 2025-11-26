@@ -23,4 +23,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 function validateEmail(email) {
     const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return re.test(email);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a0a1775fd4701d4de26dacc77eef5fdae7bc6db5
