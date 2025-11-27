@@ -1,47 +1,27 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0; 
+    margin: 0;
     padding: 0;
     background-color: #004d40;
     color: #ffffff;
+
 }
 
-/* --- HEADER & NAVİGASYON ÇUBUĞU DÜZENİ --- */
-header {
-    background-color: #004d40;
-    padding: 10px 0; 
-}
-
-.navbar {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-}
-
-/* --- LOGO AYARLARI (MENÜ ÇUBUĞUNDAKİ KÜÇÜK LOGO) --- */
-.site-logo {
-    height: 40px; 
-    width: auto; 
-    margin-right: 25px; 
-}
-
-/* --- MENÜ LİSTESİ (UL & LI & A) AYARLARI --- */
-.navbar ul {
-    list-style-type: none; 
-    padding: 0;
+nav ul {
+    list-style-type: none;
     margin: 0;
-    display: flex; 
+    padding: 0;
+    overflow: hidden;
+    background-color: #004d40;
+    text-align: center;
 }
 
-.navbar li {
-    margin-left: 20px; 
+nav ul li {
+    display: inline-block;
 }
 
-.navbar a {
+nav ul li a {
+
     display: block;
     color: rgb(245, 245, 245);
     text-align: center;
@@ -49,25 +29,47 @@ header {
     text-decoration: none;
 }
 
-.navbar a:hover {
-    background-color: #ffcc00; 
-    color: #004d40; 
+
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #f2f0f0;
+
 }
 
-/* --- ANA İÇERİK (MAIN) STİLLERİ --- */
-main {
-    padding-top: 50px; 
+
+
+
+
+header {
+    background-color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
 }
+
+
+
+header h1 {
+    color: #004d40;
+    margin-bottom: 5px;
+
+}
+
+
 
 .project-image img {
-    display: block; 
-    max-width: 300px; 
+    display: block;
+    max-width: 100%;
     height: auto;
-    margin: 0 auto; 
+    margin: 0 auto;
+
 }
+
+
 
 .project-description h2 {
     text-align: center;
-    color: #fbfbfb; 
-    margin-top: 30px;
+    color: #fcfcfc;
 }
+
