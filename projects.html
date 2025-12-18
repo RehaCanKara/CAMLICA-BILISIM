@@ -1,60 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projelerimiz</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Projelerimiz</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
 </head>
 <body>
-    
-<style>
-  body {
-    text-align: center;
-  }
- </style>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="about.html">Hakkımda</a></li>
-                <li><a href="projects.html">Projelerim</a></li>
-                <li><a href="contact.html">Bize Ulaşın</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="about.html">Hakkımda</a></li>
+      <li><a class="active" href="projects.html">Projelerim</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <main>
-        
-        <div class="project-image">
-            <img src="6.png" alt="İkinci Proje Ekran Görüntüsü">
-        </div>
-        <div class="project-image">
-            <img src="7.png" alt="İkinci Proje Ekran Görüntüsü">
-        </div>
-        <div class="project-image">
-            <img src="8.png" alt="İkinci Proje Ekran Görüntüsü">
-        </div>
-        <div class="project-image">
-            <img src="9.png" alt="İkinci Proje Ekran Görüntüsü">
-        </div>
+<section class="projects-modern">
+  <div class="projects-header">
+    <h1>Projelerimiz</h1>
+    <p>Kurumsal, ölçeklenebilir ve modern dijital çözümler üretiyoruz.</p>
+  </div>
 
-    <script src="js/script.js"></script>
+  <div class="projects-grid">
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="about.html">Hakkımda</a></li>
-                <li><a href="contact.html">Bize Ulaşın</a></li>
-            </ul>
-        </nav>
-    </header>
+   
+    <div class="project-glass">
+      <img src="çamfinans.png" alt="">
+      <div class="overlay">
+        <span>2028</span>
+        <h2>Çam Finans</h2>
+        <p>Kurumsal e-ticaret ve finansal altyapı projesi.</p>
+        <a href="#">Projeyi İncele</a>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 Çamlıca. Tüm hakları saklıdır.</p>
-    </footer> 
+    <div class="project-glass">
+      <img src="yapay.png" alt="">
+      <div class="overlay">
+        <span>2030</span>
+        <h2>Çamlıca AI</h2>
+        <p>Yerli ve milli yapay zekamız.</p>
+        <a href="#">Projeyi İncele</a>
+      </div>
+    </div>
+
+    <div class="project-glass">
+      <img src="camcityy.png" alt="">
+      <div class="overlay">
+        <span>2033</span>
+        <h2>Mobil ve web tabanlı oyun.</h2>
+        <p>Hayallerinizin sınırlarını keşfedin.</p>
+        <a href="#">Projeyi İncele</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  © 2025 Çamlıca. Tüm hakları saklıdır.
+</footer>
 
 </body>
 </html>

@@ -1,96 +1,79 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim</title>
-    
-    <style>
-  body {
-    text-align: center;
-  }
-   </style>
+  <meta charset="UTF-8">
+  <title>İletişim</title>
 
-   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
+
+<header>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="about.html">Hakkımda</a></li>
+      <li><a href="projects.html">Projelerim</a></li>
+      <li><a class="active" href="contact.html">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="contact-modern">
+  <div class="contact-container">
+    <div class="contact-map">
+  <iframe
+    src="https://www.google.com/maps?q=istanbul&t=m&z=13&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+
+   
+    <div class="contact-info">
+      <h1>Bizimle İletişime Geçin</h1>
+      <p>
+        Projeleriniz için profesyonel, güvenilir ve modern çözümler
+        sunuyoruz. Bizimle iletişime geçin.
+      </p>
+
+      <ul>
+        <li><strong>Email:</strong> info@camlica.com</li>
+        <li><strong>Telefon:</strong> +90 553 945 06 13</li>
+        <li><strong>Adres:</strong> İstanbul / Türkiye</li>
+      </ul>
+    </div>
+
     
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="about.html">Hakkımda</a></li>
-                <li><a href="projects.html">Projelerim</a></li>
-                <li><a href="contact.html">Bize Ulaşın</a></li>
-            </ul>
-        </nav>
-    </header>
+    <form class="contact-form">
+      <h2>Mesaj Gönder</h2>
 
-     <div class="project-image">
-           <img src="10.png" alt="harita Ekran Görüntüsü">
-        </div>
+      <div class="input-group">
+        <input type="text" required>
+        <label>Ad Soyad</label>
+      </div>
 
-    <br>
-    <hr><hr>
-    <br>
+      <div class="input-group">
+        <input type="email" required>
+        <label>E-posta</label>
+      </div>
 
-     <div class="project-image">
-           <img src="harita.png" alt="harita Ekran Görüntüsü">
-        </div>
+      <div class="input-group">
+        <textarea required></textarea>
+        <label>Mesajınız</label>
+      </div>
 
-    <br>
-    <hr><hr>
-    <br>
+      <button type="submit">Gönder</button>
+    </form>
 
-    <main>
-        <div class="project-description">
-            <h2>Bize Ulaşın</h2>
-            </div>
-        
-        <form id="contactForm">
- 
-            <div>
-                <label for="name">Adınız-Soyadınız:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <br>
-            
-            <div>
-                <label for="email">E-posta:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <br>
-            
-            <div>
-                <label for="phone">Telefon Numaranız:</label>
-                <input type="tel" id="phone" name="phone" required> 
-            </div>
-            <br>
-            
-            <div>
-                <label for="message">Mesajınız:</label>
-                <input type="message" id="message" name="message" required>
-            </div>
-            <br><br>
-            <button type="submit">Gönder</button>
-        </form>
-    </main>
-<br><br>
-    <script src="js/script.js"></script>
-    
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="about.html">Hakkımda</a></li>
-                <li><a href="projects.html">Projelerim</a></li>
-            </ul>
-        </nav>
-    </header>
+  </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Çamlıca. Tüm hakları saklıdır.</p>
-    </footer>
-    
+<footer class="footer">
+  © 2025 Çamlıca. Tüm hakları saklıdır.
+</footer>
+
 </body>
 </html>
