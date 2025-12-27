@@ -145,3 +145,10 @@
   border: none;
   filter: grayscale(100%) contrast(1.1);
 }
+
+.footer {
+  padding: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
