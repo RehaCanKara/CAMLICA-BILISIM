@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -16,6 +15,7 @@
       <li><a href="index.html">Ana Sayfa</a></li>
       <li><a href="about.html">Hakkımda</a></li>
       <li><a class="active" href="projects.html">Projelerim</a></li>
+      <li><a href="ik.html">İnsan Kaynakları</a></li>
       <li><a href="contact.html">İletişim</a></li>
     </ul>
   </nav>
@@ -29,14 +29,13 @@
 
   <div class="projects-grid">
 
-   
     <div class="project-glass">
       <img src="çamfinans.png" alt="">
       <div class="overlay">
         <span>2028</span>
         <h2>Çam Finans</h2>
-        <p>Kurumsal e-ticaret ve finansal altyapı projesi.</p>
-        <a href="#">Projeyi İncele</a>
+        <p>Kurumsal e-ticaret ve finans altyapısı.</p>
+        <a href="#" onclick="openModal('cam')">Projeyi İncele</a>
       </div>
     </div>
 
@@ -45,8 +44,8 @@
       <div class="overlay">
         <span>2032</span>
         <h2>Çamlıca AI</h2>
-        <p>Yerli ve milli yapay zekamız.</p>
-        <a href="#">Projeyi İncele</a>
+        <p>Yerli ve milli yapay zeka.</p>
+        <a href="#" onclick="openModal('ai')">Projeyi İncele</a>
       </div>
     </div>
 
@@ -54,18 +53,72 @@
       <img src="camcityy.png" alt="">
       <div class="overlay">
         <span>2034</span>
-        <h2>Mobil ve web tabanlı oyun.</h2>
-        <p>Hayallerinizin sınırlarını keşfedin.</p>
-        <a href="#">Projeyi İncele</a>
+        <h2>Cam City</h2>
+        <p>Mobil & web tabanlı oyun.</p>
+        <a href="#" onclick="openModal('game')">Projeyi İncele</a>
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- MODAL -->
+<div id="projectModal" class="modal">
+  <div class="modal-box">
+
+    <span class="close" onclick="closeModal()">×</span>
+
+    <div class="modal-image">
+      <img id="modalImage" src="">
+    </div>
+
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+    </div>
+
+  </div>
+</div>
+
 <footer class="footer">
   © 2025 Çamlıca Software. Tüm hakları saklıdır.
 </footer>
+
+<script>
+function openModal(project) {
+  const modal = document.getElementById("projectModal");
+  const title = document.getElementById("modalTitle");
+  const text = document.getElementById("modalText");
+  const image = document.getElementById("modalImage");
+
+  if (project === "cam") {
+    title.innerText = "Çam Finans";
+    image.src = "çamfinans.png";
+    text.innerText =
+      "Çam Finans, kurumsal firmalar için geliştirilen güvenli ve ölçeklenebilir bir finans ve e-ticaret altyapı platformudur. Online ödeme sistemleri, banka ve sanal POS entegrasyonları, muhasebe ve raporlama modülleriyle işletmelere tek merkezden finansal yönetim imkanı sunar.";
+  }
+
+  if (project === "ai") {
+    title.innerText = "Çamlıca AI";
+    image.src = "yapay.png";
+    text.innerText =
+      "Çamlıca AI; doğal dil işleme, görüntü tanıma ve büyük veri analizi alanlarında çözümler sunan yerli ve milli bir yapay zeka platformudur. Kurumsal sistemlerle kolay entegrasyon sağlar ve veri odaklı karar süreçlerini hızlandırır.";
+  }
+
+  if (project === "game") {
+    title.innerText = "Cam City";
+    image.src = "camcityy.png";
+    text.innerText =
+      "Cam City, mobil ve web platformları için geliştirilen modern bir şehir simülasyonu oyunudur. Çok oyunculu altyapısı, gerçek zamanlı mekanikleri ve dinamik görev sistemiyle kullanıcıya uzun süreli etkileşim sunar.";
+  }
+
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("projectModal").style.display = "none";
+}
+</script>
 
 </body>
 </html>

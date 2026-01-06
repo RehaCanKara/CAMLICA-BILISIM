@@ -1,0 +1,169 @@
+:root {
+  --primary: #7a0000;
+  --secondary: #e7a75a;
+  --dark: #222;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
+}
+
+
+.ik-hero {
+  height: 75vh;
+  background: url("../Insan-Kaynaklari-Yonetimi2-1.png") center/cover no-repeat;
+  position: relative;
+}
+
+.ik-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ik-hero h1 {
+  font-size: 76px;
+  color: #fff;
+}
+
+.ik-hero p {
+  font-size: 24px;
+  color: var(--secondary);
+}
+
+
+.fade-down {
+  animation: fadeDown 1.2s ease forwards;
+}
+
+.fade-up {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.fade-section {
+  animation: fadeSection 1.4s ease forwards;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSection {
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.hr-section {
+  padding: 130px 8%;
+  background: linear-gradient(180deg, #fff, #f4f4f4);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hr-section h2 {
+  text-align: center;
+  font-size: 48px;
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.hr-section h3 {
+  margin-top: 60px;
+  font-size: 26px;
+}
+
+.hr-section p {
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.hr-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hr-section ul li {
+  padding: 14px 0 14px 30px;
+  position: relative;
+}
+
+.hr-section ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.cv-section {
+  padding: 120px 8%;
+}
+
+.cv-section h2 {
+  text-align: center;
+  font-size: 42px;
+  color: var(--primary);
+  margin-bottom: 50px;
+}
+
+.cv-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cv-form input,
+.cv-form textarea {
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.cv-form button {
+  padding: 16px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cv-form button:hover {
+  background: var(--secondary);
+}
+
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #555;
+}
+
+
+@media (max-width: 768px) {
+  .ik-hero h1 { font-size: 42px; }
+  .ik-hero p { font-size: 18px; }
+  .hr-section h2 { font-size: 34px; }
+}
