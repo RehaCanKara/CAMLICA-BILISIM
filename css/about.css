@@ -12,7 +12,7 @@
 
 .projects-header p {
   font-size: 20px;
-  color: #555;
+  color: #333;
 }
 
 .about-cta {
@@ -163,6 +163,35 @@
   color: #444;
   line-height: 1.7;
 }
+
+/* Açıklama metnini çerçeveye al ve animasyon ekle */
+.projects-header p {
+  border: 2px solid #7a0000;
+  background: #e7a75a; /* Açık turuncu very light */
+  color: #7a0000;
+  padding: 25px 30px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin: 20px auto 0 auto;
+  box-shadow: 0 8px 20px rgba(156, 2, 2, 0.2);
+
+  opacity: 0;
+  animation: fadeInBox 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Animasyon tanımı */
+@keyframes fadeInBox {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(40px); }

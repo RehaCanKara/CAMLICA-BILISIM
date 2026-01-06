@@ -1,98 +1,200 @@
 
 .hero {
-  height: 100vh;
-  background: url("../arkaplanım.png") center/cover no-repeat;
   position: relative;
-  color: #fff;
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: url("../arkaplanım.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: linear-gradient(120deg, rgba(0,0,0,0.85), rgba(0,0,0,0.6));
+  z-index: 1;
+}
+
+.glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.45;
+  animation: floatGlow 10s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+.glow-1 {
+  background: #e7a75a;
+  top: -80px;
+  left: -80px;
+}
+
+.glow-2 {
+  background: #090303;
+  bottom: -80px;
+  right: -80px;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  max-width: 900px;
   text-align: center;
+  animation: fadeUp 1.2s ease forwards;
 }
 
 .hero-content h1 {
-  font-size: 72px;
-  letter-spacing: 2px;
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
 }
 
-.hero-content span {
-  font-size: 14px;
-  letter-spacing: 4px;
-  opacity: 0.8;
+.hero-content h1 span {
+  color: #e7a75a;
+}
+
+.hero-content p {
+  margin-top: 14px;
+  font-size: 17px;
+  color: #ccc;
+}
+
+.hero-icons .icon-card img {
+  width: 150px;  /* Mevcut 40px ise bunu iki kat büyüttüm */
+  height: 150px; /* Oranları koru */
+  object-fit: contain; /* Görüntüyü bozmadan büyütür */
+  margin-bottom: 15px; /* İkon ile başlık arası boşluk */
 }
 
 
+/* BUTONLAR - HERO BUTTONS */
+
+.hero-buttons {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  background-color: rgba(255 255 255 / 0.08); /* yarı saydam beyaz arka plan */
+  padding: 16px 24px;
+  border-radius: 40px;
+  border: 2px solid #e7a75a;
+  box-shadow: 0 0 20px #e7a75a;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+}
+/* HERO İCONLAR */
 
 .hero-icons {
-  margin-top: 80px;
   display: flex;
-  gap: 80px;
-  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  flex-wrap: wrap;
+  margin-top: 55px;
 }
 
 .icon-card {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 180px;
+  padding: 22px 18px;
+  background: rgba(255 255 255 / 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  text-align: center;
+  transition: 0.35s ease;
+  color: #ffffff;
+}
+
+.icon-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255 255 255 / 0.15);
 }
 
 .icon-card img {
-  width: 100px;
-  margin-bottom: 10px;
+  width:100px;
+  margin-bottom: 80px;
 }
 
-.icon-card.big {
-  width: 280px;
-  height: 280px;
-  background: #7a0000;
+.icon-card h3 {
+  font-size: 27px;
+  margin-bottom: 15px;
 }
 
+.icon-card span {
+  font-size: 15px;
+  color: #ccc;
+}
 
+/* VISION */
 
 .vision {
-  padding: 100px 10%;
+  padding: 90px 20px;
+  background: #ffffff;
   text-align: center;
 }
 
 .vision h2 {
-  font-size: 36px;
+  font-size: 34px;
   color: #7a0000;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
-.lines {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.lines span {
-  width: 100px;
-  height: 2px;
-  background: #7a0000;
+.vision p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 15px;
+  color: #000000;
 }
 
 
+/* ANIMATIONS */
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatGlow {
+  to {
+    transform: translateY(60px);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  .icon-card {
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-buttons,
+  .career-cta .hero-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
 .footer {
   padding: 30px;
   text-align: center;

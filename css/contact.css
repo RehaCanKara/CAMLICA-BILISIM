@@ -6,13 +6,14 @@
 
 .contact-container {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 2fr 1fr; 
   gap: 80px;
   background: rgba(255,255,255,0.6);
   backdrop-filter: blur(12px);
   border-radius: 32px;
   padding: 80px;
   box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+  align-items: flex-start;
 }
 
 .contact-left {
@@ -84,20 +85,24 @@
   border-radius: 32px;
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  margin-right: -430px;
 }
 
 .contact-map iframe {
   width: 100%;
-  height: 380px;
+  height: 500px;
   border: none;
   filter: grayscale(100%) contrast(1.1);
 }
 
 .contact-form {
   background: #fff;
-  padding: 60px;
+  padding: 40px;
   border-radius: 24px;
   box-shadow: 0 30px 60px rgba(122,0,0,0.15);
+  max-width: 380px;
+  height: auto;         
+  align-self: flex-start; 
 }
 
 .contact-form h2 {
@@ -108,23 +113,23 @@
 
 .input-group {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 16px;
 }
 
 .input-group input,
 .input-group textarea {
   width: 100%;
-  padding: 16px 14px;
+  padding: 12px 10px;
   border: none;
   border-bottom: 2px solid #ccc;
-  font-size: 16px;
+  font-size: 15px;
   outline: none;
   background: transparent;
 }
 
 .input-group textarea {
   resize: none;
-  height: 120px;
+  height: 70px;
 }
 
 .input-group label {
