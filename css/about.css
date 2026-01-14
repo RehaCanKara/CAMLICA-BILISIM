@@ -1,45 +1,81 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
+/* HERO */
+.about-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 140px 8%;
+  background: linear-gradient(135deg, #7a0000, #5c1212);
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 64px;
+  line-height: 1.2;
+}
+
+.hero-text span {
+  color: #e7a75a;
+}
+
+.hero-text p {
+  margin: 25px 0;
+  font-size: 20px;
+  opacity: .9;
+}
+
+.hero-btn {
+  padding: 16px 44px;
+  background: #e7a75a;
+  color: #7a0000;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .4s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.3);
+}
+
+.hero-image img {
+  width: 520px;
+}
+
+.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+}
+
+/* BİZ KİMİZ */
 .projects-modern {
   padding: 140px 8%;
-  background: linear-gradient(180deg, #f6f6f6, #f6f6f6);
+  background: #f6f6f6;
   text-align: center;
 }
 
 .projects-header h1 {
-  font-size: 56px;
+  font-size: 52px;
   color: #7a0000;
 }
 
 .projects-header p {
-  font-size: 20px;
-  color: #333;
-}
-
-.about-cta {
-  display: flex;
-  justify-content: center;
-  margin-top: 45px;
-}
-
-.contact-btn {
-  display: inline-block;
-  padding: 18px 48px;
-  background: linear-gradient(135deg, #7a0000, #5c1212);
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 50px;
-  transition: 0.4s ease;
-  box-shadow: 0 20px 40px rgba(122,0,0,0.35);
-}
-
-.contact-btn:hover {
-  transform: translateY(-6px);
-  background: linear-gradient(135deg, #e7a75a, #c88b3f);
+  max-width: 800px;
+  margin: 30px auto;
+  background: #e7a75a;
+  padding: 25px;
+  border-radius: 15px;
   color: #7a0000;
 }
 
+/* TIMELINE */
 .about-section {
   max-width: 1200px;
   margin: 140px auto;
@@ -55,47 +91,39 @@
   left: 50%;
   width: 4px;
   height: 100%;
-  background: #7a0000;
-  transform: translateX(-50%);
+  background: linear-gradient(#7a0000, #e7a75a);
 }
 
 .about-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 60px;
-  animation: fadeUp 1s ease forwards;
 }
 
-.about-item.left { flex-direction: row; }
-.about-item.right { flex-direction: row-reverse; }
+.about-item.right {
+  flex-direction: row-reverse;
+}
 
 .about-box {
   width: 260px;
-  height: 320px;
+  height: 300px;
   background: #7a0000;
-  color: #f6f6f6;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 0.4s;
+  transition: .4s;
 }
 
 .about-box:hover {
   transform: scale(1.06);
-  box-shadow: 0 20px 40px rgba(122,0,0,.3);
 }
 
 .year {
   background: #e7a75a;
-  padding: 20px 40px;
-  font-size: 46px;
-  margin-bottom: 20px;
-}
-
-.title {
-  font-size: 32px;
+  padding: 18px 40px;
+  font-size: 42px;
 }
 
 .about-text {
@@ -104,112 +132,66 @@
   color: #7a0000;
 }
 
-
+/* WHY */
 .why-us-section {
   padding: 140px 8%;
   background: #f6f6f6;
-}
-
-.why-header {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.why-header h2 {
-  font-size: 50px;
-  color: #7a0000;
-}
-
-.why-header p {
-  font-size: 20px;
-  color: #555555;
 }
 
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 40px;
-  max-width: 1200px;
-  margin: auto;
 }
 
 .why-card {
   background: #fff;
-  padding: 50px 40px;
+  padding: 45px;
   border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(0,0,0,.08);
   text-align: center;
-  transition: 0.5s;
-  animation: fadeUp 1s ease forwards;
-}
-
-.why-card i {
-  font-size: 48px;
-  color: #e7a75a;
-  margin-bottom: 20px;
+  transition: .4s;
 }
 
 .why-card:hover {
   transform: translateY(-15px);
-}
-
-.why-card h3 {
-  font-size: 26px;
-  color: #7a0000;
-}
-
-.why-card p {
-  font-size: 17px;
-  color: #444;
-  line-height: 1.7;
-}
-
-/* Açıklama metnini çerçeveye al ve animasyon ekle */
-.projects-header p {
-  border: 2px solid #7a0000;
-  background: #e7a75a; /* Açık turuncu very light */
-  color: #7a0000;
-  padding: 25px 30px;
-  border-radius: 15px;
-  max-width: 900px;
-  margin: 20px auto 0 auto;
-  box-shadow: 0 8px 20px rgba(156, 2, 2, 0.2);
-
-  opacity: 0;
-  animation: fadeInBox 1s ease forwards;
-  animation-delay: 0.5s;
-}
-
-/* Animasyon tanımı */
-@keyframes fadeInBox {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  box-shadow: 0 20px 50px rgba(0,0,0,.15);
 }
 
 .footer {
   padding: 30px;
   text-align: center;
-  font-size: 14px;
   color: #555;
 }
 
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBİL */
 @media (max-width: 768px) {
-  .about-section::before { left: 20px; }
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+
+  .about-section::before {
+    left: 20px;
+  }
+
   .about-item {
     flex-direction: column !important;
-    align-items: flex-start;
     padding-left: 40px;
   }
 }
