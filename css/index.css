@@ -1,57 +1,50 @@
+/* ================= GLOBAL FIX ================= */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
 
+/* ================= HERO ================= */
 .hero {
   position: relative;
+  width: 100vw;
+  height: 100vh;
   min-height: 100vh;
-  padding: 120px 20px 80px;
-  background: url("../arkaplanım.png") center/cover no-repeat;
+  background:
+    radial-gradient(circle at top left, #e7a75a30, transparent),
+    linear-gradient(135deg, #ffffff, #050505);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-.hero-overlay {
+.hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(0,0,0,0.85), rgba(0,0,0,0.6));
+  width: 100%;
+  height: 100%;
+  background: url("../arkaplanım.png") center center / cover no-repeat;
+  opacity: 0.25;
   z-index: 1;
 }
 
-.glow {
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%;
-  filter: blur(110px);
-  opacity: 0.45;
-  animation: floatGlow 10s infinite alternate ease-in-out;
-  z-index: 0;
-}
 
-.glow-1 {
-  background: #e7a75a;
-  top: -80px;
-  left: -80px;
-}
-
-.glow-2 {
-  background: #090303;
-  bottom: -80px;
-  right: -80px;
-}
-
+/* ================= CONTENT ================= */
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 900px;
   text-align: center;
-  animation: fadeUp 1.2s ease forwards;
+  max-width: 1000px;
+  padding: 0 20px;
+  animation: fadeUp 1.2s ease;
 }
 
 .hero-content h1 {
-  font-size: 60px;
-  font-weight: 700;
-  color: #fff;
+  font-size: 64px;
+  color: #ffffff;
 }
 
 .hero-content h1 span {
@@ -59,105 +52,114 @@
 }
 
 .hero-content p {
-  margin-top: 14px;
-  font-size: 17px;
-  color: #ccc;
+  margin-top: 18px;
+  font-size: 18px;
+  color: #dddddd;
 }
 
-.hero-icons .icon-card img {
-  width: 150px;  /* Mevcut 40px ise bunu iki kat büyüttüm */
-  height: 150px; /* Oranları koru */
-  object-fit: contain; /* Görüntüyü bozmadan büyütür */
-  margin-bottom: 15px; /* İkon ile başlık arası boşluk */
-}
-
-
-/* BUTONLAR - HERO BUTTONS */
-
+/* ================= BUTTONS ================= */
 .hero-buttons {
-  margin-top: 45px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
-  gap: 22px;
-  background-color: rgba(255 255 255 / 0.08); /* yarı saydam beyaz arka plan */
-  padding: 16px 24px;
-  border-radius: 40px;
-  border: 2px solid #e7a75a;
-  box-shadow: 0 0 20px #e7a75a;
-  max-width: 420px;
-  margin-left: auto;
-  margin-right: auto;
-  user-select: none;
+  gap: 20px;
 }
-/* HERO İCONLAR */
 
+.btn {
+  padding: 16px 42px;
+  border-radius: 40px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background: #e7a75a;
+  color: #7a0000;
+}
+
+.btn.primary:hover {
+  transform: translateY(-4px);
+}
+
+.btn.outline {
+  border: 2px solid #e7a75a;
+  color: #e7a75a;
+}
+
+/* ================= ICONS ================= */
 .hero-icons {
+  margin-top: 80px;
   display: flex;
+  gap: 35px;
   justify-content: center;
-  gap: 34px;
   flex-wrap: wrap;
-  margin-top: 55px;
 }
 
 .icon-card {
-  width: 180px;
-  padding: 22px 18px;
-  background: rgba(255 255 255 / 0.08);
+  width: 200px;
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   border-radius: 22px;
-  text-align: center;
-  transition: 0.35s ease;
   color: #ffffff;
+  transition: 0.4s ease;
 }
 
 .icon-card:hover {
-  transform: translateY(-8px);
-  background: rgba(255 255 255 / 0.15);
+  transform: translateY(-12px) scale(1.03);
 }
 
 .icon-card img {
-  width:100px;
-  margin-bottom: 80px;
-}
-
-.icon-card h3 {
-  font-size: 27px;
+  width: 90px;
   margin-bottom: 15px;
 }
 
-.icon-card span {
-  font-size: 15px;
-  color: #ccc;
+.icon-card h3 {
+  font-size: 22px;
 }
 
-/* VISION */
+.icon-card span {
+  font-size: 14px;
+  color: #cccccc;
+}
 
-.vision {
-  padding: 90px 20px;
-  background: #ffffff;
+/* ================= WHY ================= */
+.why-us-section {
+  padding: 140px 8%;
+  background: #f8f8f8;
   text-align: center;
 }
 
-.vision h2 {
-  font-size: 34px;
+.why-us-section h2 {
+  font-size: 42px;
   color: #7a0000;
-  margin-bottom: 12px;
 }
 
-.vision p {
-  max-width: 720px;
-  margin: auto;
-  font-size: 15px;
-  color: #000000;
+.why-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
 }
 
+.why-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+}
 
-/* ANIMATIONS */
+.why-card:hover {
+  transform: translateY(-10px);
+}
 
+/* ================= ANIMATIONS ================= */
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -165,39 +167,110 @@
   }
 }
 
-@keyframes floatGlow {
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #e7a75a;
+  transition: 0.4s ease;
+}
+
+/* ================= MOBILE MENU OVERLAY ================= */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  z-index: 1000;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* PANEL */
+.menu-panel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CLOSE BUTTON */
+.menu-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 34px;
+  color: #e7a75a;
+  cursor: pointer;
+}
+
+/* LINKS */
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.menu-links a {
+  font-size: 32px;
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: menuFade 0.6s forwards;
+}
+
+.menu-links a:nth-child(1) { animation-delay: 0.1s; }
+.menu-links a:nth-child(2) { animation-delay: 0.2s; }
+.menu-links a:nth-child(3) { animation-delay: 0.3s; }
+.menu-links a:nth-child(4) { animation-delay: 0.4s; }
+.menu-links a:nth-child(5) { animation-delay: 0.5s; }
+
+.menu-links a:hover {
+  color: #e7a75a;
+}
+
+@keyframes menuFade {
   to {
-    transform: translateY(60px);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* RESPONSIVE */
-
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
-  .hero-content h1 {
-    font-size: 46px;
+  .desktop-menu {
+    display: none;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 36px;
+    font-size: 42px;
   }
-  .icon-card {
-    width: 160px;
-  }
+}
+.menu.desktop-menu a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #cd1c1c;
+  transition: 0.3s;
 }
 
-@media (max-width: 480px) {
-  .hero-buttons,
-  .career-cta .hero-buttons {
-    flex-direction: column;
-    gap: 16px;
-  }
-}
-.footer {
-  padding: 30px;
-  text-align: center;
-  font-size: 14px;
-  color: #555;
+.menu.desktop-menu a:hover {
+  color: #e7a75a;
 }

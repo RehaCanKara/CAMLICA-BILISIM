@@ -6,9 +6,8 @@
   <title>Hakkımızda | Çamlıca Software</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -26,90 +25,43 @@
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="about-hero">
   <div class="hero-text">
     <h1>Birlikte<br><span>Geleceği Kodluyoruz</span></h1>
     <p>Dijital çözümler, güçlü altyapı ve sürdürülebilir başarı.</p>
-    <a href="contact.html" class="hero-btn">Bizimle İletişime Geçin</a>
+
+    <div class="hero-buttons">
+      <a href="contact.html" class="hero-btn primary">Bizimle İletişime Geçin</a>
+      <button class="hero-btn outline" onclick="scrollToDetail()">Daha Fazla</button>
+    </div>
   </div>
 
   <div class="hero-image">
     <img src="arkaplanım.png" alt="Ekip Çalışması">
   </div>
-
-  <svg class="wave" viewBox="0 0 1440 120">
-    <path fill="#f6f6f6"
-      d="M0,64L80,74.7C160,85,320,107,480,106.7C640,107,800,85,960,80C1120,75,1280,85,1360,90.7L1440,96L1440,0L0,0Z">
-    </path>
-  </svg>
 </section>
 
-<section class="projects-modern">
+<!-- BİZ KİMİZ -->
+<section class="projects-modern" id="detail">
   <div class="projects-header">
     <h1>Biz Kimiz?</h1>
     <p>
-      Çamlıca Software olarak teknolojiyi yalnızca üretmiyor,
-      iş ortaklarımız için gerçek değere dönüştürüyoruz.
+      Çamlıca Software olarak yazılım, web ve dijital dönüşüm alanlarında
+      markalara uçtan uca çözümler sunuyoruz.
     </p>
-  </div>
-</section>
-
-<section class="about-section">
-
-  <div class="about-item left">
-    <div class="about-box">
-      <div class="year">2025</div>
-      <div class="title">KURULUŞ</div>
-    </div>
-    <div class="about-text">Yenilikçi bakış açımızla sektöre güçlü bir giriş yaptık.</div>
-  </div>
-
-  <div class="about-item right">
-    <div class="about-box">
-      <div class="year">2027</div>
-      <div class="title">İLK ADIMLAR</div>
-    </div>
-    <div class="about-text">Uluslararası projelerde aktif rol aldık.</div>
-  </div>
-
-</section>
-
-<section class="why-us-section">
-  <div class="why-header">
-    <h2>Neden Çamlıca Software?</h2>
-    <p>Güven, kalite ve yenilik.</p>
-  </div>
-
-  <div class="why-grid">
-    <div class="why-card">
-      <i class="fa-solid fa-handshake"></i>
-      <h3>Güven</h3>
-      <p>Uzun vadeli iş ortaklığı.</p>
-    </div>
-
-    <div class="why-card">
-      <i class="fa-solid fa-users-gear"></i>
-      <h3>Uzman Kadro</h3>
-      <p>Alanında profesyoneller.</p>
-    </div>
-
-    <div class="why-card">
-      <i class="fa-solid fa-lightbulb"></i>
-      <h3>Yenilik</h3>
-      <p>Modern çözümler.</p>
-    </div>
-
-    <div class="why-card">
-      <i class="fa-solid fa-award"></i>
-      <h3>Kalite</h3>
-      <p>Sürdürülebilir başarı.</p>
-    </div>
   </div>
 </section>
 
 <footer class="footer">
   © 2025 Çamlıca Software. Tüm hakları saklıdır.
 </footer>
+
+<script>
+function scrollToDetail() {
+  document.getElementById("detail").scrollIntoView({ behavior: "smooth" });
+}
+</script>
 
 </body>
 </html>

@@ -3,72 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <title>Çamlıca Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- ANA CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
 
-<header class="header">
-  <nav class="navbar">
-    <ul class="menu">
-      <li><a class="active" href="index.html">Ana Sayfa</a></li>
-      <li><a href="about.html">Hakkımda</a></li>
-      <li><a href="projects.html">Projelerim</a></li>
-      <li><a href="ik.html">İnsan Kaynakları</a></li>
-      <li><a href="contact.html">İletişim</a></li>
-    </ul>
+<body>
+<header>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span><span class="menu-text">Menü</span>
+    </div>
+
   </nav>
 </header>
 
+<!-- OVERLAY MENU -->
+<div class="menu-overlay" id="menuOverlay">
+  <div class="menu-panel">
+    <div class="menu-close" id="menuClose">✕</div>
+
+    <nav class="menu-links">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="about.html">Hakkımızda</a>
+      <a href="projects.html">Projeler</a>
+      <a href="ik.html">İnsan Kaynakları</a>
+      <a href="contact.html">İletişim</a>
+    </nav>
+  </div>
+</div>
+
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="glow glow-1"></div>
-  <div class="glow glow-2"></div>
+  <div class="hero-bg"></div>
 
   <div class="hero-content">
-    <h1>Çamlıca <span>Software</span></h1>
-    <p>Modern, güvenilir ve ölçeklenebilir yazılım çözümleri geliştiriyoruz</p>
-
-    <div class="hero-icons">
-      <div class="icon-card">
-        <img src="arma11.png">
-        <h3>Güvenilir</h3>
-        <span>Stabil sistem altyapısı</span>
-      </div>
-
-      <div class="icon-card">
-        <img src="arma22.png">
-        <h3>Yenilikçi</h3>
-        <span>Modern teknoloji stack</span>
-      </div>
-
-      <div class="icon-card">
-        <img src="arma33.png">
-        <h3>Kurumsal</h3>
-        <span>Profesyonel çözümler</span>
-      </div>
-    </div>
+    <h1>Dijitali<br>
+    <span>Geleceğe Taşıyoruz</span></h1>
+    <p>Modern, ölçeklenebilir ve güvenilir yazılım çözümleri</p>
   </div>
-</section>
 
-<!-- VISION -->
-<section class="vision">
-  <h2>Geleceği Kodluyoruz</h2>
-  <p>
-    Web, mobil ve kurumsal yazılım çözümleriyle markanızı dijital dünyada ileri taşıyoruz.
-  </p>
-</section>
+<div class="hero-buttons"> 
+<a href="about.html" class="btn primary">Hakkımızda</a> 
+<a href="#why" class="btn outline">Keşfet</a> 
+</div> 
+  
+<div class="hero-icons"> 
+<div class="icon-card"> 
+<img src="arma11.png" alt="Güvenilir"> 
+<h3>Güvenilir</h3> <span>Stabil altyapı</span> 
+</div> 
 
-</section>
+<div class="icon-card"> 
+<img src="arma22.png" alt="Yenilikçi"> 
+<h3>Yenilikçi</h3> <span>Modern teknoloji</span> 
+</div>
 
-<footer class="footer">
-  © 2025 Çamlıca Software. Tüm hakları saklıdır.
-</footer>
+<div class="icon-card"> 
+<img src="arma33.png" alt="Kurumsal"> 
+<h3>Kurumsal</h3> <span>Profesyonel çözümler</span> 
+</div> 
 
-
+</div> </section>
+<script src="js/script.js"></script>
 </body>
 </html>

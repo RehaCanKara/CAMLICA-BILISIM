@@ -7,21 +7,21 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #fff;
+  background: #9b1616;
 }
 
 nav ul.menu {
   list-style: none;
-  padding: 20px;
-  background: #f8f8f8;
+  padding: 0px;
+  background: #ffffff;
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 0px;
 }
 
 nav ul.menu li a {
   padding: 12px 24px;
-  background: #7a1c1c;
+  background: #ffffff;
   border-radius: 8px;
   text-decoration: none;
   color: #fff;
@@ -29,5 +29,5 @@ nav ul.menu li a {
 }
 
 nav ul.menu li a.active {
-  background: #5c1212;
+  background: #ffffff;
 }
