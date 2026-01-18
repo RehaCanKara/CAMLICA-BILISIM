@@ -1,38 +1,49 @@
-/* ================= GLOBAL FIX ================= */
-html, body {
-  width: 100%;
-  height: 100%;
+/* ================= RESET ================= */
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= GLOBAL BACKGROUND (TEK ARKA PLAN) ================= */
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, #d4d2d030, transparent),
+    linear-gradient(180deg, #050505, #1a0000);
+  color: #fff;
   overflow-x: hidden;
 }
 
-/* ================= HERO ================= */
+/* ================= HERO (ANASAYFA) ================= */
+
 .hero {
   position: relative;
   width: 100vw;
   height: 100vh;
-  min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, #e7a75a30, transparent),
-    linear-gradient(135deg, #ffffff, #050505);
+  background: transparent !important;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+/* ARKA PLAN GÖRSELİ */
+
 .hero-bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
-  width: 100%;
-  height: 100%;
-  background: url("../arkaplanım.png") center center / cover no-repeat;
-  opacity: 0.25;
-  z-index: 1;
+  background: url("../arkaplanım.png") center / cover no-repeat;
+  opacity: 0.12;
+  z-index: 0;
+  pointer-events: none;
 }
 
+/* CONTENT */
 
-/* ================= CONTENT ================= */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -44,7 +55,7 @@ html, body {
 
 .hero-content h1 {
   font-size: 64px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .hero-content h1 span {
@@ -54,40 +65,46 @@ html, body {
 .hero-content p {
   margin-top: 18px;
   font-size: 18px;
-  color: #dddddd;
+  color: #ddd;
 }
 
 /* ================= BUTTONS ================= */
+
 .hero-buttons {
   margin-top: 40px;
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.btn {
-  padding: 16px 42px;
+.btn,
+.hero-btn {
+  padding: 16px 44px;
   border-radius: 40px;
   font-weight: 700;
-  text-decoration: none;
+  cursor: pointer;
   transition: 0.3s ease;
+  border: none;
 }
 
-.btn.primary {
+.primary {
   background: #e7a75a;
   color: #7a0000;
 }
 
-.btn.primary:hover {
-  transform: translateY(-4px);
-}
-
-.btn.outline {
+.outline {
+  background: transparent;
   border: 2px solid #e7a75a;
   color: #e7a75a;
 }
 
+.primary:hover {
+  transform: translateY(-4px);
+}
+
 /* ================= ICONS ================= */
+
 .hero-icons {
   margin-top: 80px;
   display: flex;
@@ -102,7 +119,7 @@ html, body {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   border-radius: 22px;
-  color: #ffffff;
+  color: #fff;
   transition: 0.4s ease;
 }
 
@@ -115,83 +132,51 @@ html, body {
   margin-bottom: 15px;
 }
 
-.icon-card h3 {
-  font-size: 22px;
+/* ================= HEADER MENU ================= */
+
+.hero-header {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 50;
 }
 
-.icon-card span {
-  font-size: 14px;
-  color: #cccccc;
-}
-
-/* ================= WHY ================= */
-.why-us-section {
-  padding: 140px 8%;
-  background: #f8f8f8;
-  text-align: center;
-}
-
-.why-us-section h2 {
-  font-size: 42px;
-  color: #7a0000;
-}
-
-.why-grid {
-  margin-top: 70px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-}
-
-.why-card {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-  transition: 0.4s ease;
-}
-
-.why-card:hover {
-  transform: translateY(-10px);
-}
-
-/* ================= ANIMATIONS ================= */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= HAMBURGER ================= */
 .hamburger {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.hamburger .lines {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  cursor: pointer;
-  z-index: 1100;
 }
 
-.hamburger span {
+.hamburger .lines span {
   width: 28px;
   height: 3px;
   background: #e7a75a;
-  transition: 0.4s ease;
 }
 
-/* ================= MOBILE MENU OVERLAY ================= */
+.menu-text {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #e7a75a;
+  animation: menuPulse 2.8s infinite;
+}
+
+/* ================= OVERLAY MENU ================= */
+
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0,0,0,0.65);
   backdrop-filter: blur(16px);
   opacity: 0;
   pointer-events: none;
-  transition: 0.4s ease;
+  transition: 0.4s;
   z-index: 1000;
 }
 
@@ -200,77 +185,156 @@ html, body {
   pointer-events: all;
 }
 
-/* PANEL */
-.menu-panel {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* CLOSE BUTTON */
-.menu-close {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  font-size: 34px;
-  color: #e7a75a;
-  cursor: pointer;
-}
-
-/* LINKS */
-.menu-links {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
 .menu-links a {
   font-size: 32px;
-  color: #ffffff;
-  text-decoration: none;
+  color: #fff;
   opacity: 0;
-  transform: translateY(20px);
   animation: menuFade 0.6s forwards;
 }
 
-.menu-links a:nth-child(1) { animation-delay: 0.1s; }
-.menu-links a:nth-child(2) { animation-delay: 0.2s; }
-.menu-links a:nth-child(3) { animation-delay: 0.3s; }
-.menu-links a:nth-child(4) { animation-delay: 0.4s; }
-.menu-links a:nth-child(5) { animation-delay: 0.5s; }
+/* ================= ABOUT HERO ================= */
 
-.menu-links a:hover {
+.about-hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  background: transparent !important;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-hero .hero-text {
+  max-width: 600px;
+  animation: fadeLeft 1s ease;
+}
+
+.about-hero .hero-text h1 {
+  font-size: 72px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.about-hero .hero-text h1 span {
+  display: block;
+  margin-top: 10px;
   color: #e7a75a;
+}
+
+.about-hero .hero-text p {
+  margin-top: 28px;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* === HERO IMAGE FLOAT (KORUNDU) === */
+
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 520px;
+  max-width: 100%;
+  animation: float 6s ease-in-out infinite !important;
+  filter: drop-shadow(0 40px 80px rgba(0,0,0,0.45));
+}
+
+/* === ICONLARI GÖRSELİN ALTINA AL (BOZMADAN) === */
+
+.about-hero .hero-icons {
+  margin-top: 40px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* ================= BİZ KİMİZ ================= */
+
+.projects-modern {
+  background: transparent !important;
+  padding: 140px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.projects-header h1 {
+  font-size: 64px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  animation: fadeUp 1s ease;
+}
+
+.projects-header h1 span {
+  color: #e7a75a;
+}
+
+.projects-header p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #ffffff;
+  background: rgba(193, 192, 190, 0.18);
+  padding: 32px;
+  border-radius: 22px;
+  backdrop-filter: blur(8px);
+  animation: softFadeUp 1.2s ease;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes menuPulse {
+  0%,100% { opacity: 0.6; }
+  50% { opacity: 1; }
 }
 
 @keyframes menuFade {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes softFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-  .desktop-menu {
-    display: none;
-  }
-}
 
 @media (max-width: 768px) {
-  .hero-content h1 {
+  .hero-content h1 { font-size: 42px; }
+
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .about-hero .hero-icons {
+    flex-wrap: wrap;
+  }
+
+  .projects-header h1 {
     font-size: 42px;
   }
 }
-.menu.desktop-menu a {
-  font-size: 18px;
-  font-weight: 600;
-  color: #cd1c1c;
-  transition: 0.3s;
-}
 
-.menu.desktop-menu a:hover {
-  color: #e7a75a;
-}

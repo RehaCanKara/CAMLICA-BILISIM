@@ -56,6 +56,25 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    /* ======================
+       BİZ KİMİZ SCROLL ANİMASYONU (EK)
+    ====================== */
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+        reveals.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementTop < windowHeight - 120) {
+                el.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // sayfa yenilenince kontrol et
+
 });
 
 /* ======================
@@ -65,3 +84,4 @@ function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
+

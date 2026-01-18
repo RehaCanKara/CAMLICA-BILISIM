@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -5,27 +6,80 @@
   <title>Çamlıca Software</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ANA CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
 
+  <!-- FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<header>
 
-    <!-- HAMBURGER -->
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+  <!-- MENU -->
+  <header class="hero-header">
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
-      <span></span><span class="menu-text">Menü</span>
+      <span></span>
+      <span class="menu-text">Menü</span>
+    </div>
+  </header>
+
+  <!-- ARKAPLAN -->
+  <div class="hero-bg"></div>
+
+  <!-- HERO CONTENT -->
+  <section class="about-hero">
+    <div class="hero-text">
+      <h1 class="fancy-text underline-anim">
+        Birlikte<br><span>Geleceği Kodluyoruz</span>
+      </h1>
+
+      <p class="soft-fade">
+        Modern, ölçeklenebilir ve güvenilir yazılım çözümleri
+      </p>
+
+      <div class="hero-buttons">
+        <button class="hero-btn outline" onclick="scrollToDetail()">Daha Fazla</button>
+      </div>
     </div>
 
-  </nav>
-</header>
+    <div class="hero-image">
+      <img src="Çamlıca - 1 - Düzenlendi.png" alt="Ekip Çalışması">
+    </div>
+  </section>
 
-<!-- OVERLAY MENU -->
+</section>
+<!-- ============== HERO BİTTİ ============== -->
+
+
+<!-- ================= HERO ICONS ================= -->
+<section class="hero-icons">
+  <div class="icon-card">
+    <img src="arma11.png" alt="Güvenilir">
+    <h3>Güvenilir</h3>
+    <span>Stabil altyapı</span>
+  </div>
+
+  <div class="icon-card">
+    <img src="arma22.png" alt="Yenilikçi">
+    <h3>Yenilikçi</h3>
+    <span>Modern teknoloji</span>
+  </div>
+
+  <div class="icon-card">
+    <img src="arma33.png" alt="Kurumsal">
+    <h3>Kurumsal</h3>
+    <span>Profesyonel çözümler</span>
+  </div>
+</section>
+
+
+<!-- ================= OVERLAY MENU ================= -->
 <div class="menu-overlay" id="menuOverlay">
   <div class="menu-panel">
     <div class="menu-close" id="menuClose">✕</div>
@@ -40,38 +94,37 @@
   </div>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg"></div>
 
-  <div class="hero-content">
-    <h1>Dijitali<br>
-    <span>Geleceğe Taşıyoruz</span></h1>
-    <p>Modern, ölçeklenebilir ve güvenilir yazılım çözümleri</p>
+<!-- ================= BİZ KİMİZ ================= -->
+<section class="projects-modern" id="detail">
+  <div class="projects-header hero-text about-style">
+
+    <h1 class="fancy-text">
+      Biz Kimiz?
+    </h1>
+
+    <p class="soft-fade">
+      Çamlıca Software olarak yazılım, web ve dijital dönüşüm alanlarında
+      markalara uçtan uca, sürdürülebilir ve yenilikçi çözümler sunuyoruz.
+    </p>
+
   </div>
+</section>
 
-<div class="hero-buttons"> 
-<a href="about.html" class="btn primary">Hakkımızda</a> 
-<a href="#why" class="btn outline">Keşfet</a> 
-</div> 
-  
-<div class="hero-icons"> 
-<div class="icon-card"> 
-<img src="arma11.png" alt="Güvenilir"> 
-<h3>Güvenilir</h3> <span>Stabil altyapı</span> 
-</div> 
 
-<div class="icon-card"> 
-<img src="arma22.png" alt="Yenilikçi"> 
-<h3>Yenilikçi</h3> <span>Modern teknoloji</span> 
-</div>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  © 2025 Çamlıca Software. Tüm hakları saklıdır.
+</footer>
 
-<div class="icon-card"> 
-<img src="arma33.png" alt="Kurumsal"> 
-<h3>Kurumsal</h3> <span>Profesyonel çözümler</span> 
-</div> 
 
-</div> </section>
+<script>
+function scrollToDetail() {
+  document.getElementById("detail").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
 <script src="js/script.js"></script>
+
 </body>
 </html>
