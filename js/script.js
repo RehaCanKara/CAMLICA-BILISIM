@@ -85,3 +85,40 @@ function validateEmail(email) {
     return re.test(email);
 }
 
+const statBoxes = document.querySelectorAll(".stat-box");
+
+const animateStats = () => {
+  statBoxes.forEach(box => {
+    const number = box.querySelector("h3");
+    const target = +number.getAttribute("data-target");
+
+    if (box.classList.contains("show")) return;
+
+    box.classList.add("show");
+
+    let count = 0;
+    const speed = target / 60;
+
+    const updateCount = () => {
+      count += speed;
+      if (count < target) {
+        number.innerText = Math.floor(count);
+        requestAnimationFrame(updateCount);
+      } else {
+        number.innerText = target + (number.innerText.includes("%") ? "%" : "");
+      }
+    };
+
+    updateCount();
+  });
+};
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateStats();
+    }
+  });
+}, { threshold: 0.4 });
+
+statBoxes.forEach(box => observer.observe(box));
