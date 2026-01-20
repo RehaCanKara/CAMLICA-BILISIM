@@ -1,8 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
 
 .projects-modern {
-  padding: 140px 8%;
-  background: linear-gradient(180deg, #f7f7f7, #ffffff);
+  padding: 140px 10%;
+  background: transparent;
 }
+
 
 
 .projects-header {
@@ -26,15 +33,18 @@
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+  gap: 60px;
+  max-width: 1200px;   /* SAĞ-SOL SINIR */
+  margin: 0 auto;      /* ORTALA */
+  padding: 0 40px;     /* İÇTEN BOŞLUK */
 }
 
 
 
 .project-glass {
   position: relative;
-  height: 380px;
-  border-radius: 24px;
+  height: 320px;
+  border-radius: 80px;
   overflow: hidden;
   cursor: pointer;
   background: #e7a75a;
@@ -43,7 +53,7 @@
 }
 
 .project-glass img {
-  width: 100%;
+  width: 85%;
   height: 100%;
   object-fit: cover;
   transition: 0.6s ease;
@@ -207,12 +217,13 @@
     padding: 35px;
   }
 }
-
 .tech {
   padding: 90px 20px;
-  background: #ffffff;
+  background: transparent;
   text-align: center;
 }
+
+
 
 .tech h2 {
   color: #7a0000;
@@ -240,4 +251,229 @@
 .tech-item:hover {
   transform: translateY(-10px);
   background: rgba(29, 20, 20, 0.14);
+}
+
+/* ================= ICONS ================= */
+
+.hero-icons {
+  margin-top: 80px;
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.icon-card {
+  width: 200px;
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+.icon-card:hover {
+  transform: translateY(-12px) scale(1.03);
+}
+
+.icon-card img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* ================= HEADER MENU ================= */
+
+.hero-header {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 50;
+}
+
+.hamburger {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.hamburger .lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hamburger .lines span {
+  width: 28px;
+  height: 3px;
+  background: #e7a75a;
+}
+
+.menu-text {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #e7a75a;
+  animation: menuPulse 2.8s infinite;
+}
+
+/* ================= OVERLAY MENU ================= */
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  min-width: 220px;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.95);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 1000;
+}
+
+.menu-overlay.active {
+  transform: translateX(0);
+}
+
+
+.menu-links a {
+  font-size: 32px;
+  color: #fff;
+  opacity: 0;
+  animation: menuFade 0.6s forwards;
+  text-decoration: none !important;
+}
+.menu-panel {
+  width: 32%;
+  max-width: 420px;
+  min-width: 280px;
+  height: auto;
+  margin: auto;
+  padding: 60px 40px;
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 24px;
+  text-align: center;
+  animation: menuPanelIn 0.45s ease forwards;
+}
+
+.menu-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+}
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.menu-overlay.active .menu-links a {
+  animation: menuFade 0.6s forwards;
+}
+
+@keyframes menuFade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-overlay.active .menu-links a:nth-child(1) { animation-delay: 0.1s; }
+.menu-overlay.active .menu-links a:nth-child(2) { animation-delay: 0.2s; }
+.menu-overlay.active .menu-links a:nth-child(3) { animation-delay: 0.3s; }
+.menu-overlay.active .menu-links a:nth-child(4) { animation-delay: 0.4s; }
+.menu-overlay.active .menu-links a:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes menuItemFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuPanelIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.projects-modern .hero-icons {
+  margin-top: 0;
+}
+
+.projects-page {
+  min-height: 100vh;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("../arkaplanım.png") center / cover no-repeat fixed;
+}
+
+/* ================= ABOUT HERO ================= */
+
+.about-hero {
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  background: transparent !important;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-hero .hero-text {
+  max-width: 600px;
+  animation: fadeLeft 1s ease;
+}
+
+.about-hero .hero-text h1 {
+  font-size: 72px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.about-hero .hero-text h1 span {
+  display: block;
+  margin-top: 10px;
+  color: #e7a75a;
+}
+
+.about-hero .hero-text p {
+  margin-top: 28px;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 42px; }
+
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .about-hero .hero-icons {
+    flex-wrap: wrap;
+  }
+
+  .projects-header h1 {
+    font-size: 42px;
+  }
 }

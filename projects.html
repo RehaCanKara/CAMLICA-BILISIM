@@ -9,94 +9,188 @@
 </head>
 <body>
 
-<header>
-  <nav>
-    <ul class="menu">
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a class="active" href="projects.html">Projelerim</a></li>
-      <li><a href="ik.html">İnsan Kaynakları</a></li>
-      <li><a href="contact.html">İletişim</a></li>
-    </ul>
-  </nav>
-</header>
+<div class="projects-page">
 
-<section class="projects-modern">
-  <div class="projects-header">
-    <h1>Projelerimiz</h1>
-    <p>Kurumsal, ölçeklenebilir ve modern dijital çözümler üretiyoruz.</p>
-  </div>
+  <section class="hero">
 
-  <div class="projects-grid">
+    <header class="hero-header">
+      <div class="hamburger" id="hamburger">
+        <div class="lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="menu-text">Menü</span>
+      </div>
+    </header>
 
-    <div class="project-glass">
-      <img src="çamfinans.png" alt="">
-      <div class="overlay">
-        <span>2028</span>
-        <h2>Çam Finans</h2>
-        <p>Kurumsal e-ticaret ve finans altyapısı.</p>
-        <a href="#" onclick="openModal('cam')">Projeyi İncele</a>
+    <div class="menu-overlay" id="menuOverlay">
+      <div class="menu-panel">
+        <div class="menu-close" id="menuClose">✕</div>
+
+        <nav class="menu-links">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="projects.html">Projeler</a>
+          <a href="ik.html">İnsan Kaynakları</a>
+          <a href="contact.html">İletişim</a>
+        </nav>
       </div>
     </div>
 
-    <div class="project-glass">
-      <img src="yapay.png" alt="">
-      <div class="overlay">
-        <span>2032</span>
-        <h2>Çamlıca AI</h2>
-        <p>Yerli ve milli yapay zeka.</p>
-        <a href="#" onclick="openModal('ai')">Projeyi İncele</a>
+  </section>
+
+  <section class="about-hero">
+    <div class="hero-text">
+      <h1 class="fancy-text underline-anim">
+        Modern Teknoloji<br><span>Güçlü Çözümler</span>
+      </h1>
+    </div>
+   <div class="hero-image">
+      <img src="Çamlıca - 1 - Düzenlendi - Kopya.png" alt="Ekip Çalışması">
+    </div>
+  </section>
+
+    <div class="projects-grid">
+
+      <div class="project-glass">
+        <img src="çamfinans.png" alt="">
+        <div class="overlay">
+          <span>2028</span>
+          <h2>Çam Finans</h2>
+          <p>Kurumsal e-ticaret ve finans altyapısı.</p>
+          <a href="#" onclick="openModal('cam')">Projeyi İncele</a>
+        </div>
       </div>
-    </div>
 
-    <div class="project-glass">
-      <img src="camcityy.png" alt="">
-      <div class="overlay">
-        <span>2034</span>
-        <h2>Cam City</h2>
-        <p>Mobil & web tabanlı oyun.</p>
-        <a href="#" onclick="openModal('game')">Projeyi İncele</a>
+      <div class="project-glass">
+        <img src="yapay.png" alt="">
+        <div class="overlay">
+          <span>2032</span>
+          <h2>Çamlıca AI</h2>
+          <p>Yerli ve milli yapay zeka.</p>
+          <a href="#" onclick="openModal('ai')">Projeyi İncele</a>
+        </div>
       </div>
-    </div>
 
+      <div class="project-glass">
+        <img src="camcityy.png" alt="">
+        <div class="overlay">
+          <span>2034</span>
+          <h2>Cam City</h2>
+          <p>Mobil & web tabanlı oyun.</p>
+          <a href="#" onclick="openModal('game')">Projeyi İncele</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="projectModal" class="modal">
+    <div class="modal-box">
+
+      <span class="close" onclick="closeModal()">×</span>
+
+      <div class="modal-image">
+        <img id="modalImage" src="">
+      </div>
+
+      <div class="modal-content">
+        <h2 id="modalTitle"></h2>
+        <p id="modalText"></p>
+      </div>
+
+    </div>
   </div>
-</section>
 
-<!-- MODAL -->
-<div id="projectModal" class="modal">
-  <div class="modal-box">
-
-    <span class="close" onclick="closeModal()">×</span>
-
-    <div class="modal-image">
-      <img id="modalImage" src="">
+  <section class="about-hero">
+    <div class="hero-text">
+      <h1 class="fancy-text underline-anim">
+        Kullanılan<br><span>Güçlü Teknolojiler</span>
+      </h1>
     </div>
 
-    <div class="modal-content">
-      <h2 id="modalTitle"></h2>
-      <p id="modalText"></p>
+  </section>
+
+  <section class="hero-icons">
+    <div class="icon-card">
+      <img src="HTML-5-Badge-Logo-1024x559.png" alt="Güvenilir">
+      <h3>HTML5</h3>
+      <span>Stabil altyapı</span>
     </div>
 
-  </div>
+    <div class="icon-card">
+      <img src="css3.svg" alt="Yenilikçi">
+      <h3>CSS3</h3>
+      <span>Modern teknoloji</span>
+    </div>
+
+    <div class="icon-card">
+      <img src="javascript.png" alt="Kurumsal">
+      <h3>JvaScript</h3>
+      <span>Profesyonel çözümler</span>
+    </div>
+  </section>
+
+  <section class="hero-icons">
+    <div class="icon-card">
+      <img src="MySQL-Logo.png" alt="Güvenilir">
+      <h3>MySQL</h3>
+      <span>Stabil altyapı</span>
+    </div>
+
+    <div class="icon-card">
+      <img src="nodejs-logo.svg" alt="Yenilikçi">
+      <h3>Node.js</h3>
+      <span>Modern teknoloji</span>
+    </div>
+
+    <div class="icon-card">
+      <img src="p-80-java.webp" alt="Kurumsal">
+      <h3>Java</h3>
+      <span>Profesyonel çözümler</span>
+    </div>
+  </section>
+
+  <section class="hero-icons">
+    <div class="icon-card">
+      <img src="PHP-logo.svg.png" alt="Güvenilir">
+      <h3>PHP</h3>
+      <span>Stabil altyapı</span>
+    </div>
+
+    <div class="icon-card">
+      <img src="Python-logo-notext.svg.png" alt="Yenilikçi">
+      <h3>Yenilikçi</h3>
+      <span>Modern teknoloji</span>
+    </div>
+
+    <div class="icon-card">
+      <img src="React.svg.png" alt="Kurumsal">
+      <h3>React</h3>
+      <span>Profesyonel çözümler</span>
+    </div>
+  </section>
+   
+  <section class="tech">
+    <h2>Kullandığımız Teknolojiler</h2>
+    <div class="tech-list">
+      <div class="tech-item">HTML5</div>
+      <div class="tech-item">CSS3</div>
+      <div class="tech-item">JavaScript</div>
+      <div class="tech-item">React</div>
+      <div class="tech-item">Node.js</div>
+      <div class="tech-item">PHP</div>
+      <div class="tech-item">MySQL</div>
+      <div class="tech-item">REST API</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2025 Çamlıca Software. Tüm hakları saklıdır.
+  </footer>
+
 </div>
-
-<section class="tech">
-  <h2>Kullandığımız Teknolojiler</h2>
-  <div class="tech-list">
-    <div class="tech-item">HTML5</div>
-    <div class="tech-item">CSS3</div>
-    <div class="tech-item">JavaScript</div>
-    <div class="tech-item">React</div>
-    <div class="tech-item">Node.js</div>
-    <div class="tech-item">PHP</div>
-    <div class="tech-item">MySQL</div>
-    <div class="tech-item">REST API</div>
-  </div>
-</section>
-
-
-<footer class="footer">
-  © 2025 Çamlıca Software. Tüm hakları saklıdır.
-</footer>
 
 <script>
 function openModal(project) {
@@ -134,7 +228,8 @@ function closeModal() {
 }
 </script>
 
-</section>
+<script src="js/script.js"></script>
 
 </body>
 </html>
+
