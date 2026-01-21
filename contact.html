@@ -12,16 +12,33 @@
 </head>
 <body>
 
-<header>
-  <nav>
-    <ul class="menu">
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="projects.html">Projelerim</a></li>
-      <li><a href="ik.html">İnsan Kaynakları</a></li>
-      <li><a class="active" href="contact.html">İletişim</a></li>
-    </ul>
-  </nav>
-</header>
+  <section class="hero">
+
+    <header class="hero-header">
+      <div class="hamburger" id="hamburger">
+        <div class="lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="menu-text">Menü</span>
+      </div>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay">
+      <div class="menu-panel">
+        <div class="menu-close" id="menuClose">✕</div>
+
+        <nav class="menu-links">
+          <a href="index.html">Ana Sayfa</a>
+          <a href="projects.html">Projeler</a>
+          <a href="ik.html">İnsan Kaynakları</a>
+          <a href="contact.html">İletişim</a>
+        </nav>
+      </div>
+    </div>
+
+  </section>
 
 <section class="contact-modern">
   <div class="contact-container">
@@ -103,6 +120,8 @@
 <footer class="footer">
   © 2025 Çamlıca Software. Tüm hakları saklıdır.
 </footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
