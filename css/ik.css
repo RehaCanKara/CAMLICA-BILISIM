@@ -436,3 +436,36 @@ body {
   backdrop-filter: blur(8px); /* Arka planı bulanıklaştır */
   animation: softFadeUp 1.2s ease; /* Yumuşak fade animasyonu */
 }
+.about-hero {
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  background: transparent !important;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-hero .hero-text {
+  max-width: 600px;
+  animation: fadeLeft 1s ease;
+}
+
+.about-hero .hero-text h1 {
+  font-size: 72px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.about-hero .hero-text h1 span {
+  display: block;
+  margin-top: 10px;
+  color: #e7a75a;
+}
+
+.about-hero .hero-text p {
+  margin-top: 28px;
+  font-size: 18px;
+  opacity: 0.95;
+}
