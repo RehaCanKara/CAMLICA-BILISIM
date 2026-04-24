@@ -1,274 +1,270 @@
 :root {
-  --primary: #7a0000;
-  --secondary: #e7a75a;
-  --dark: #e90b0b;
+  --primary: #7a0000; /* Ana renk */
+  --secondary: #e7a75a; /* İkinci renk */
+  --dark: #e90b0b; /* Koyu kırmızı */
 }
-
 
 body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  color: #333;
+  margin: 0; /* Sayfanın kenarlarında boşluk bırakmamak için */
+  font-family: "Segoe UI", Arial, sans-serif; /* Yazı tipi */
+  color: #333; /* Genel yazı rengi */
 }
 
-
 .ik-hero {
-  height: 75vh;
-  background: transparent !important;
-  position: relative;
+  height: 75vh; /* Yükseklik: viewport yüksekliğinin %75'i */
+  background: transparent !important; /* Arka plan transparan, !important ile öncelikli */
+  position: relative; /* Pozisyonlama yapılacak */
 }
 
 .ik-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: transparent !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: absolute; /* Eleman, ik-hero içinde yerleştirilecek */
+  inset: 0; /* Üst, alt, sağ, sol kenarlarını sıfırlar */
+  background: transparent !important; /* Arka plan transparan */
+  display: flex; /* Flexbox düzeni */
+  flex-direction: column; /* Dikeyde sıralama */
+  justify-content: center; /* İçeriği dikeyde ortalar */
+  align-items: center; /* İçeriği yatayda ortalar */
 }
 
-.ik-hero h1 { /* insan kaynakalrı yazısı */
-  font-size: 40px;
-  color: #ffffff;
+.ik-hero h1 { /* Başlık stili */
+  font-size: 76px; /* Başlık boyutu */
+  color: #ffffff; /* Beyaz renk */
+  margin-bottom: 10px; /* Alt boşluk */
 }
 
 .ik-hero p {
-  font-size: 24px;
-  color: var(--secondary);
+  font-size: 24px; /* Paragraf boyutu */
+  color: var(--secondary); /* İkinci renk */
 }
 
-
 .fade-down {
-  animation: fadeDown 1.2s ease forwards;
+  animation: fadeDown 1.2s ease forwards; /* FadeDown animasyonu */
 }
 
 .fade-up {
-  animation: fadeUp 1.2s ease forwards;
+  animation: fadeUp 1.2s ease forwards; /* FadeUp animasyonu */
 }
 
 .fade-section {
-  animation: fadeSection 1.4s ease forwards;
+  animation: fadeSection 1.4s ease forwards; /* FadeSection animasyonu */
 }
 
 @keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-40px); } /* Başlangıç: şeffaf ve yukarıda */
+  to { opacity: 1; transform: translateY(0); } /* Bitiş: opak ve normal pozisyonda */
 }
 
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(40px); } /* Başlangıç: şeffaf ve aşağıda */
+  to { opacity: 1; transform: translateY(0); } /* Bitiş: opak ve normal pozisyonda */
 }
 
 @keyframes fadeSection {
-  from { opacity: 0; transform: translateY(60px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(60px); } /* Başlangıç: şeffaf ve daha altta */
+  to { opacity: 1; transform: translateY(0); } /* Bitiş: opak ve normal pozisyonda */
 }
 
-
 .hr-section {
-  padding: 130px 8%;
-  background: transparent !important;
+  padding: 130px 8%; /* Yüksek ve geniş padding (üst-alt 130px, sağ-sol %8) */
+  background: transparent !important; /* Arka plan transparan */
 }
 
 .container {
-  max-width: 1100px;
-  margin: auto;
+  max-width: 1100px; /* Maksimum genişlik */
+  margin: auto; /* Ortalamak için */
 }
 
 .hr-section h2 {
-  text-align: center;
-  font-size: 48px;
-  color: var(--primary);
-  margin-bottom: 40px;
+  text-align: center; /* Başlık ortalanacak */
+  font-size: 48px; /* Başlık boyutu */
+  color: var(--primary); /* Ana renk */
+  margin-bottom: 40px; /* Alt boşluk */
 }
 
 .hr-section h3 {
-  margin-top: 60px;
-  font-size: 26px;
+  margin-top: 60px; /* Üstten 60px boşluk */
+  font-size: 26px; /* Alt başlık boyutu */
 }
 
 .hr-section p {
-  font-size: 17px;
-  line-height: 1.9;
+  font-size: 17px; /* Paragraf boyutu */
+  line-height: 1.9; /* Satır aralığı */
 }
 
 .hr-section ul {
-  list-style: none;
-  padding: 0;
+  list-style: none; /* Liste işaretlerini kaldırır */
+  padding: 0; /* İç padding yok */
 }
 
 .hr-section ul li {
-  padding: 14px 0 14px 30px;
-  position: relative;
+  padding: 14px 0 14px 30px; /* Liste öğesi içindeki boşluklar */
+  position: relative; /* Pozisyon belirleme */
 }
 
 .hr-section ul li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: var(--primary);
+  content: "✔"; /* ✔ işareti ekleniyor */
+  position: absolute; /* Listede sağa sola yerleştirme */
+  left: 0; /* Sola hizala */
+  color: var(--primary); /* Ana renk */
 }
 
 .cv-section {
-  padding: 120px 8%;
+  padding: 120px 8%; /* Yüksek ve geniş padding (üst-alt 120px, sağ-sol %8) */
 }
 
 .cv-section h2 {
-  text-align: center;
-  font-size: 42px;
-  color: var(--primary);
-  margin-bottom: 50px;
+  text-align: center; /* Başlık ortalanacak */
+  font-size: 42px; /* Başlık boyutu */
+  color: var(--primary); /* Ana renk */
+  margin-bottom: 50px; /* Alt boşluk */
 }
 
 .cv-form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  max-width: 600px; /* Maksimum genişlik */
+  margin: auto; /* Ortalamak için */
+  display: flex; /* Flexbox düzeni */
+  flex-direction: column; /* Dikey sıralama */
+  gap: 18px; /* Elemanlar arasında boşluk */
 }
 
 .cv-form input,
 .cv-form textarea {
-  padding: 15px;
-  border-radius: 14px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+  padding: 15px; /* İç padding */
+  border-radius: 14px; /* Köşe yuvarlama */
+  border: 1px solid #ccc; /* Kenarlık rengi */
+  font-size: 16px; /* Yazı tipi boyutu */
 }
 
 .cv-form button {
-  padding: 16px;
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  border-radius: 30px;
-  font-size: 17px;
-  cursor: pointer;
-  transition: 0.3s;
+  padding: 16px; /* İç padding */
+  background: var(--primary); /* Arka plan ana renk */
+  color: #fff; /* Yazı rengi beyaz */
+  border: none; /* Kenarlık yok */
+  border-radius: 30px; /* Köşe yuvarlama */
+  font-size: 17px; /* Yazı tipi boyutu */
+  cursor: pointer; /* Fare işareti pointer */
+  transition: 0.3s; /* Geçiş süresi */
 }
 
 .cv-form button:hover {
-  background: var(--secondary);
+  background: var(--secondary); /* Hoverda ikinci renk */
 }
-
 
 .footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 14px;
-  color: #555;
+  text-align: center; /* Footer metni ortalanacak */
+  padding: 30px; /* İç padding */
+  font-size: 14px; /* Yazı boyutu */
+  color: #555; /* Yazı rengi */
 }
 
-
 @media (max-width: 768px) {
-  .ik-hero h1 { font-size: 42px; }
-  .ik-hero p { font-size: 18px; }
-  .hr-section h2 { font-size: 34px; }
+  .ik-hero h1 { font-size: 42px; } /* Ekran küçüldüğünde başlık boyutu */
+  .ik-hero p { font-size: 18px; } /* Paragraf boyutu */
+  .hr-section h2 { font-size: 34px; } /* Başlık boyutu */
 }
 
 /* ================= HEADER MENU ================= */
 
 .hero-header {
-  position: fixed;
-  top: 40px;
-  left: 40px;
-  z-index: 50;
+  position: fixed; /* Sabit konum */
+  top: 40px; /* Üstten 40px */
+  left: 40px; /* Soldan 40px */
+  z-index: 50; /* Katman sırası */
 }
 
 .hamburger {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  cursor: pointer;
+  display: flex; /* Flexbox düzeni */
+  align-items: center; /* Ortalamak için */
+  gap: 14px; /* Elemanlar arası boşluk */
+  cursor: pointer; /* Tıklanabilir işareti */
 }
 
 .hamburger .lines {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  display: flex; /* Flexbox düzeni */
+  flex-direction: column; /* Dikey sıralama */
+  gap: 6px; /* Satırlar arası boşluk */
 }
 
 .hamburger .lines span {
-  width: 28px;
-  height: 3px;
-  background: #e7a75a;
+  width: 28px; /* Genişlik */
+  height: 3px; /* Yükseklik */
+  background: #e7a75a; /* Arka plan rengi */
 }
 
 .menu-text {
-  font-size: 16px;
-  letter-spacing: 2px;
-  color: #e7a75a;
-  animation: menuPulse 2.8s infinite;
+  font-size: 16px; /* Yazı boyutu */
+  letter-spacing: 2px; /* Harfler arası boşluk */
+  color: #e7a75a; /* İkinci renk */
+  animation: menuPulse 2.8s infinite; /* Animasyon */
 }
 
 /* ================= OVERLAY MENU ================= */
 
 .menu-overlay {
-  position: fixed;
+  position: fixed; /* Sabit konum */
   top: 0;
   left: 0;
-  width: 20%;
-  min-width: 220px;
-  height: 100vh;
-  background: rgba(20, 20, 20, 0.95);
-  transform: translateX(-100%);
-  transition: transform 0.4s ease;
-  z-index: 1000;
+  width: 20%; /* Genişlik %20 */
+  min-width: 220px; /* Minimum genişlik */
+  height: 100vh; /* Yükseklik 100vh */
+  background: rgba(20, 20, 20, 0.95); /* Koyu arka plan */
+  transform: translateX(-100%); /* Başlangıçta gizli */
+  transition: transform 0.4s ease; /* Geçiş animasyonu */
+  z-index: 1000; /* Üst katman sırası */
 }
 
 .menu-overlay.active {
-  transform: translateX(0);
+  transform: translateX(0); /* Menü aktif olunca sağa kayar */
 }
-
 
 .menu-links a {
-  font-size: 32px;
-  color: #fff;
-  opacity: 0;
-  animation: menuFade 0.6s forwards;
-  text-decoration: none !important;
+  font-size: 32px; /* Link boyutu */
+  color: #fff; /* Yazı rengi beyaz */
+  opacity: 0; /* Başlangıçta şeffaf */
+  animation: menuFade 0.6s forwards; /* Menü animasyonu */
+  text-decoration: none !important; /* Alt çizgi kaldırıldı */
 }
+
 .menu-panel {
-  width: 32%;
-  max-width: 420px;
-  min-width: 280px;
-  height: auto;
-  margin: auto;
-  padding: 60px 40px;
-  background: rgba(20, 20, 20, 0.85);
-  border-radius: 24px;
-  text-align: center;
-  animation: menuPanelIn 0.45s ease forwards;
+  width: 32%; /* Genişlik %32 */
+  max-width: 420px; /* Maksimum genişlik */
+  min-width: 280px; /* Minimum genişlik */
+  height: auto; /* Yükseklik otomatik */
+  margin: auto; /* Ortalamak için */
+  padding: 60px 40px; /* İç padding */
+  background: rgba(20, 20, 20, 0.85); /* Koyu arka plan */
+  border-radius: 24px; /* Köşe yuvarlama */
+  text-align: center; /* Metin ortalanacak */
+  animation: menuPanelIn 0.45s ease forwards; /* Menü paneli animasyonu */
 }
 
 .menu-close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 36px;
-  color: #fff;
-  cursor: pointer;
+  position: absolute; /* Konumlandırma */
+  top: 30px; /* Üstten 30px */
+  right: 40px; /* Sağdan 40px */
+  font-size: 36px; /* Yazı boyutu */
+  color: #fff; /* Yazı rengi beyaz */
+  cursor: pointer; /* Tıklanabilir işareti */
 }
+
 .menu-links {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
+  display: flex; /* Flexbox düzeni */
+  flex-direction: column; /* Dikey sıralama */
+  gap: 22px; /* Elemanlar arası boşluk */
 }
 
 .menu-overlay.active .menu-links a {
-  animation: menuFade 0.6s forwards;
+  animation: menuFade 0.6s forwards; /* Link animasyonu */
 }
 
 @keyframes menuFade {
   from {
-    opacity: 0;
-    transform: translateY(25px);
+    opacity: 0; /* Başlangıçta şeffaf */
+    transform: translateY(25px); /* Başlangıçta 25px aşağıda */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Bitişte opak */
+    transform: translateY(0); /* Normal pozisyon */
   }
 }
 
@@ -280,161 +276,163 @@ body {
 
 @keyframes menuItemFade {
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Opaklık 1 olacak */
+    transform: translateY(0); /* Normal pozisyonda olacak */
   }
 }
 
 @keyframes menuPanelIn {
   from {
-    opacity: 0;
-    transform: scale(0.92);
+    opacity: 0; /* Başlangıçta şeffaf */
+    transform: scale(0.92); /* Başlangıçta biraz küçük */
   }
   to {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 1; /* Bitişte opak */
+    transform: scale(1); /* Bitişte normal boyutta */
   }
 }
+
 .ik-page {
-  min-height: 100vh;
+  min-height: 100vh; /* Sayfanın yüksekliği 100vh */
   background: 
     linear-gradient(
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
-    ),
-    url("../resimler/istockphoto-1642800589-612x612.jpg") center / cover no-repeat fixed;
+    ), /* Arka planda yarı saydam koyu renk */
+    url("../resimler/istockphoto-1642800589-612x612.jpg") center / cover no-repeat fixed; /* Arka plan görseli */
 }
 
 .ik-cta {
-  margin-top: 50px;
-  text-align: center;
+  margin-top: 50px; /* Üstten 50px boşluk */
+  text-align: center; /* Ortalamak için */
 }
 
 .cv-button {
-  display: inline-block;
-  padding: 16px 42px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #7a0000;
-  background: #e7a75a;
-  border-radius: 40px;
-  text-decoration: none;
-  transition: 0.4s ease;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  display: inline-block; /* Satır içi blok */
+  padding: 16px 42px; /* İç padding */
+  font-size: 16px; /* Yazı boyutu */
+  font-weight: 600; /* Yazı kalınlığı */
+  letter-spacing: 1px; /* Harfler arası boşluk */
+  color: #7a0000; /* Ana renk */
+  background: #e7a75a; /* İkinci renk */
+  border-radius: 40px; /* Köşe yuvarlama */
+  text-decoration: none; /* Alt çizgi yok */
+  transition: 0.4s ease; /* Geçiş animasyonu */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25); /* Gölgeleme */
 }
 
 .cv-button:hover {
-  transform: translateY(-8px) scale(1.05);
-  background: #fff;
-  color: #7a0000;
+  transform: translateY(-8px) scale(1.05); /* Hoverda büyütme ve yukarı kaydırma */
+  background: #fff; /* Arka plan beyaz */
+  color: #7a0000; /* Yazı rengi ana renk */
 }
 
 .cv-page {
-  min-height: 100vh;
+  min-height: 100vh; /* Sayfanın yüksekliği 100vh */
   background: 
     linear-gradient(
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
     ),
-    url("../resimler/Kurumsal_Cover_31384b49b4_ecf4a3f35b.jpg") center / cover no-repeat fixed;
+    url("../resimler/Kurumsal_Cover_31384b49b4_ecf4a3f35b.jpg") center / cover no-repeat fixed; /* Arka plan görseli */
 }
 
 .stat-box {
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.6s ease;
+  padding: 40px 20px; /* İç padding */
+  text-align: center; /* Metin ortalanacak */
+  border-radius: 22px; /* Köşe yuvarlama */
+  background: rgba(255, 255, 255, 0.08); /* Arka plan rengi */
+  backdrop-filter: blur(10px); /* Arka planı bulanıklaştır */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15); /* Gölgeleme */
+  opacity: 0; /* Başlangıçta şeffaf */
+  transform: translateY(40px); /* Başlangıçta altta */
+  transition: 0.6s ease; /* Geçiş animasyonu */
 }
 
 .stat-box.show {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* Opak hale gelir */
+  transform: translateY(0); /* Normal pozisyonda */
 }
 
 .stat-box:hover {
-  transform: translateY(-12px) scale(1.03);
+  transform: translateY(-12px) scale(1.03); /* Hoverda büyütme ve yukarı kaydırma */
 }
 
 .stat-box h3 {
-  font-size: 48px;
-  color: #e7a75a;
-  margin-bottom: 10px;
+  font-size: 48px; /* Başlık boyutu */
+  color: #e7a75a; /* İkinci renk */
+  margin-bottom: 10px; /* Alt boşluk */
 }
 
 .stat-box p {
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: #ffffff;
+  font-size: 16px; /* Paragraf yazı boyutu */
+  letter-spacing: 1px; /* Harfler arası boşluk */
+  color: #ffffff; /* Yazı rengi beyaz */
 }
+
 .stats-title {
-  text-align: center;
-  margin-bottom: 70px;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: titleIn 1s ease forwards;
+  text-align: center; /* Başlık ortalanacak */
+  margin-bottom: 70px; /* Alt boşluk */
+  opacity: 0; /* Başlangıçta şeffaf */
+  transform: translateY(40px); /* Başlangıçta altta */
+  animation: titleIn 1s ease forwards; /* Animasyon */
 }
 
 .stats-title h2 {
-  font-size: 52px;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1.1;
+  font-size: 52px; /* Başlık boyutu */
+  font-weight: 800; /* Yazı kalınlığı */
+  color: #fff; /* Beyaz renk */
+  line-height: 1.1; /* Satır yüksekliği */
 }
 
 .stats-title h2 span {
-  display: inline-block;
-  color: #e7a75a;
-  position: relative;
+  display: inline-block; /* Satır içi blok */
+  color: #e7a75a; /* İkinci renk */
+  position: relative; /* Konumlandırma */
 }
 
 .stats-title p {
-  margin-top: 18px;
-  font-size: 18px;
-  opacity: 0.9;
-  letter-spacing: 0.5px;
+  margin-top: 18px; /* Üst boşluk */
+  font-size: 18px; /* Yazı boyutu */
+  opacity: 0.9; /* Opaklık */
+  letter-spacing: 0.5px; /* Harfler arası boşluk */
 }
 
 @keyframes titleIn {
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Opak hale gelir */
+    transform: translateY(0); /* Normal pozisyonda */
   }
 }
 
 .projects-modern {
-  background: transparent !important;
-  padding: 140px 20px;
-  text-align: center;
-  position: relative;
-  z-index: 2;
+  background: transparent !important; /* Arka plan transparan */
+  padding: 140px 20px; /* Yüksek ve geniş padding */
+  text-align: center; /* Metin ortalanacak */
+  position: relative; /* Konumlandırma */
+  z-index: 2; /* Üst katman sırası */
 }
 
 .projects-header h1 {
-  font-size: 64px;
-  color: #ffffff;
-  margin-bottom: 30px;
-  animation: fadeUp 1s ease;
+  font-size: 64px; /* Başlık boyutu */
+  color: #ffffff; /* Beyaz renk */
+  margin-bottom: 30px; /* Alt boşluk */
+  animation: fadeUp 1s ease; /* FadeUp animasyonu */
 }
 
 .projects-header h1 span {
-  color: #e7a75a;
+  color: #e7a75a; /* İkinci renk */
 }
 
 .projects-header p {
-  max-width: 760px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.9;
-  color: #ffffff;
-  background: rgba(193, 192, 190, 0.18);
-  padding: 32px;
-  border-radius: 22px;
-  backdrop-filter: blur(8px);
-  animation: softFadeUp 1.2s ease;
+  max-width: 760px; /* Maksimum genişlik */
+  margin: 0 auto; /* Ortalamak için */
+  font-size: 18px; /* Yazı boyutu */
+  line-height: 1.9; /* Satır aralığı */
+  color: #ffffff; /* Beyaz renk */
+  background: rgba(193, 192, 190, 0.18); /* Hafif arka plan */
+  padding: 32px; /* İç padding */
+  border-radius: 22px; /* Köşe yuvarlama */
+  backdrop-filter: blur(8px); /* Arka planı bulanıklaştır */
+  animation: softFadeUp 1.2s ease; /* Yumuşak fade animasyonu */
 }
