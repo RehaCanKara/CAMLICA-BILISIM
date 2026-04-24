@@ -29,7 +29,7 @@ body {
 }
 
 .ik-hero h1 { /* insan kaynakalrı yazısı */
-  font-size: 76px;
+  font-size: 40px;
   color: #ffffff;
 }
 
@@ -302,7 +302,7 @@ body {
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
     ),
-    url("../resimler/Kurumsal_Cover_31384b49b4_ecf4a3f35b.jpg") center / cover no-repeat fixed;
+    url("../resimler/istockphoto-1642800589-612x612.jpg") center / cover no-repeat fixed;
 }
 
 .ik-cta {
