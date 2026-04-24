@@ -65,7 +65,7 @@ body {
 }
 
 .hr-section {
-  padding: 80px 8%; /* Yüksek ve geniş padding (üst-alt 130px, sağ-sol %8) */
+  padding: 40px 8%; /* Yüksek ve geniş padding (üst-alt 130px, sağ-sol %8) */
   background: transparent !important; /* Arka plan transparan */
 }
 
