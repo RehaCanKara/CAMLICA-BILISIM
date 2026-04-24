@@ -293,7 +293,7 @@ body {
 }
 
 .ik-page {
-  min-height: 20vh; /* Sayfanın yüksekliği 100vh */
+  min-height: 150vh; /* Sayfanın yüksekliği 100vh */
   background: 
     linear-gradient(
       rgba(0, 0, 0, 0.55),
