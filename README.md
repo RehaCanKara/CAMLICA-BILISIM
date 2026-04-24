@@ -1,1 +1,441 @@
 Batman Üniversitesinde, Bilgisayar Mühendisliği bölümünde okuyorum. Bu kodlamalar benim hayali şirketimin web sitesinin kodlarıdır.
+:root {
+  --primary: #7a0000;
+  --secondary: #e7a75a;
+  --dark: #e90b0b;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
+}
+
+
+.ik-hero {
+  height: 75vh;
+  background: transparent !important;
+  position: relative;
+}
+
+.ik-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ik-hero h1 { /* insan kaynakalrı yazısı */
+  font-size: 76px;
+  color: #ffffff;
+}
+
+.ik-hero p {
+  font-size: 24px;
+  color: var(--secondary);
+}
+
+
+.fade-down {
+  animation: fadeDown 1.2s ease forwards;
+}
+
+.fade-up {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.fade-section {
+  animation: fadeSection 1.4s ease forwards;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSection {
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.hr-section {
+  padding: 130px 8%;
+  background: transparent !important;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hr-section h2 {
+  text-align: center;
+  font-size: 48px;
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.hr-section h3 {
+  margin-top: 60px;
+  font-size: 26px;
+}
+
+.hr-section p {
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.hr-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hr-section ul li {
+  padding: 14px 0 14px 30px;
+  position: relative;
+}
+
+.hr-section ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.cv-section {
+  padding: 120px 8%;
+}
+
+.cv-section h2 {
+  text-align: center;
+  font-size: 42px;
+  color: var(--primary);
+  margin-bottom: 50px;
+}
+
+.cv-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cv-form input,
+.cv-form textarea {
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.cv-form button {
+  padding: 16px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cv-form button:hover {
+  background: var(--secondary);
+}
+
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #555;
+}
+
+
+@media (max-width: 768px) {
+  .ik-hero h1 { font-size: 42px; }
+  .ik-hero p { font-size: 18px; }
+  .hr-section h2 { font-size: 34px; }
+}
+
+/* ================= HEADER MENU ================= */
+
+.hero-header {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  z-index: 50;
+}
+
+.hamburger {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.hamburger .lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hamburger .lines span {
+  width: 28px;
+  height: 3px;
+  background: #e7a75a;
+}
+
+.menu-text {
+  font-size: 16px;
+  letter-spacing: 2px;
+  color: #e7a75a;
+  animation: menuPulse 2.8s infinite;
+}
+
+/* ================= OVERLAY MENU ================= */
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  min-width: 220px;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.95);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 1000;
+}
+
+.menu-overlay.active {
+  transform: translateX(0);
+}
+
+
+.menu-links a {
+  font-size: 32px;
+  color: #fff;
+  opacity: 0;
+  animation: menuFade 0.6s forwards;
+  text-decoration: none !important;
+}
+.menu-panel {
+  width: 32%;
+  max-width: 420px;
+  min-width: 280px;
+  height: auto;
+  margin: auto;
+  padding: 60px 40px;
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 24px;
+  text-align: center;
+  animation: menuPanelIn 0.45s ease forwards;
+}
+
+.menu-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+}
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.menu-overlay.active .menu-links a {
+  animation: menuFade 0.6s forwards;
+}
+
+@keyframes menuFade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-overlay.active .menu-links a:nth-child(1) { animation-delay: 0.1s; }
+.menu-overlay.active .menu-links a:nth-child(2) { animation-delay: 0.2s; }
+.menu-overlay.active .menu-links a:nth-child(3) { animation-delay: 0.3s; }
+.menu-overlay.active .menu-links a:nth-child(4) { animation-delay: 0.4s; }
+.menu-overlay.active .menu-links a:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes menuItemFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuPanelIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.ik-page {
+  min-height: 100vh;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("../resimler/arkaplanım.png") center / cover no-repeat fixed;
+}
+
+.ik-cta {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 16px 42px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #7a0000;
+  background: #e7a75a;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.4s ease;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.cv-button:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: #fff;
+  color: #7a0000;
+}
+
+.cv-page {
+  min-height: 100vh;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("../resimler/Kariyer_Yonetimi.jpg") center / cover no-repeat fixed;
+}
+
+.stat-box {
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.stat-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-box:hover {
+  transform: translateY(-12px) scale(1.03);
+}
+
+.stat-box h3 {
+  font-size: 48px;
+  color: #e7a75a;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+.stats-title {
+  text-align: center;
+  margin-bottom: 70px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: titleIn 1s ease forwards;
+}
+
+.stats-title h2 {
+  font-size: 52px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.stats-title h2 span {
+  display: inline-block;
+  color: #e7a75a;
+  position: relative;
+}
+
+.stats-title p {
+  margin-top: 18px;
+  font-size: 18px;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+@keyframes titleIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projects-modern {
+  background: transparent !important;
+  padding: 140px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.projects-header h1 {
+  font-size: 64px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  animation: fadeUp 1s ease;
+}
+
+.projects-header h1 span {
+  color: #e7a75a;
+}
+
+.projects-header p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #ffffff;
+  background: rgba(193, 192, 190, 0.18);
+  padding: 32px;
+  border-radius: 22px;
+  backdrop-filter: blur(8px);
+  animation: softFadeUp 1.2s ease;
+}
