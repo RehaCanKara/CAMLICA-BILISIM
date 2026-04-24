@@ -436,6 +436,8 @@ body {
   backdrop-filter: blur(8px); /* Arka planı bulanıklaştır */
   animation: softFadeUp 1.2s ease; /* Yumuşak fade animasyonu */
 }
+
+/* başlıkkkkk */
 .about-hero {
   min-height: 50vh;
   display: flex;
@@ -448,7 +450,7 @@ body {
 }
 
 .about-hero .hero-text {
-  max-width: 600px;
+  max-width: 400px;
   animation: fadeLeft 1s ease;
 }
 
