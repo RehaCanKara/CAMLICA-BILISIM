@@ -29,7 +29,7 @@ body {
 .ik-hero h1 { /* Başlık stili */
   font-size: 76px; /* Başlık boyutu */
   color: #ffffff; /* Beyaz renk */
-  margin-bottom: 500px; /* Alt boşluk */
+  margin-bottom: 10px; /* Alt boşluk */
 }
 
 .ik-hero p {
