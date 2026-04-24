@@ -302,7 +302,7 @@ body {
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
     ),
-    url("../resimler/ik.jpg") center / cover no-repeat fixed;
+    url("../resimler/arkaplanım.png") center / cover no-repeat fixed;
 }
 
 .ik-cta {
@@ -405,4 +405,36 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.projects-modern {
+  background: transparent !important;
+  padding: 140px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.projects-header h1 {
+  font-size: 64px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  animation: fadeUp 1s ease;
+}
+
+.projects-header h1 span {
+  color: #e7a75a;
+}
+
+.projects-header p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.9;
+  color: #ffffff;
+  background: rgba(193, 192, 190, 0.18);
+  padding: 32px;
+  border-radius: 22px;
+  backdrop-filter: blur(8px);
+  animation: softFadeUp 1.2s ease;
 }
