@@ -439,7 +439,7 @@ body {
 
 /* başlıkkkkk */
 .about-hero {
-  min-height: 30vh;
+  min-height: 40vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
