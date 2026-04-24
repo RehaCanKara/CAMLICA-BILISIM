@@ -334,7 +334,7 @@ body {
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
     ),
-    url("../resimler/Kurumsal_Cover_31384b49b4_ecf4a3f35b.jpg") center / 30% no-repeat fixed; /* Arka plan görseli */
+    url("../resimler/Kurumsal_Cover_31384b49b4_ecf4a3f35b.jpg") center / contain no-repeat fixed; /* Arka plan görseli */
 }
 
 .stat-box {
