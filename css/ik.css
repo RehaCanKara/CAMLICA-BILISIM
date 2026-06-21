@@ -1,5 +1,5 @@
 :root {
-  --primary: #7a0000; /* Ana renk */
+  --primary: #e7a75a; /* Ana renk */
   --secondary: #e7a75a; /* İkinci renk */
   --dark: #e90b0b; /* Koyu kırmızı */
 }
@@ -151,10 +151,10 @@ body {
 }
 
 .footer {
-  text-align: center; /* Footer metni ortalanacak */
-  padding: 30px; /* İç padding */
-  font-size: 14px; /* Yazı boyutu */
-  color: #555; /* Yazı rengi */
+  padding: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -299,7 +299,7 @@ body {
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
     ), /* Arka planda yarı saydam koyu renk */
-    url("../resimler/Çamlıca\ -\ 1\ -\ Düzenlendi.png") center / cover no-repeat fixed; /* Arka plan görseli */
+    url("../resimler/arkaplanım.png") center / cover no-repeat fixed; /* Arka plan görseli */
 }
 
 .ik-cta {
@@ -334,7 +334,7 @@ body {
       rgba(0, 0, 0, 0.55),
       rgba(0, 0, 0, 0.55)
     ),
-    url("../resimler/Kurumsal_Cover_31384b49b4_ecf4a3f35b.jpg") center / contain no-repeat fixed; /* Arka plan görseli */
+    url("../resimler/arkaplanım.png") center / contain no-repeat fixed; /* Arka plan görseli */
 }
 
 .stat-box {
@@ -421,7 +421,7 @@ body {
 }
 
 .projects-header h1 span {
-  color: #e7a75a; /* İkinci renk */
+  color: #342e26; /* İkinci renk */
 }
 
 .projects-header p {
@@ -443,14 +443,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 5%;
   background: transparent !important;
   color: #fff;
   overflow: hidden;
 }
 
 .about-hero .hero-text {
-  max-width: 750px;
+  max-width: 100x;
+  margin: 0 auto;
   animation: fadeLeft 1s ease;
 }
 
@@ -462,7 +463,7 @@ body {
 
 .about-hero .hero-text h1 span {
   display: block;
-  margin-top: 10px;
+  margin: 0 auto;
   color: #e7a75a;
 }
 
@@ -470,4 +471,185 @@ body {
   margin-top: 28px;
   font-size: 18px;
   opacity: 0.95;
+}
+
+/* ===================== */
+/* BENEFITS */
+/* ===================== */
+
+.benefits-section,
+.process-section,
+.perks-section{
+    padding:120px 8%;
+}
+
+.benefits-section h2,
+.process-section h2,
+.perks-section h2{
+    text-align:center;
+    font-size:58px;
+    color:#e7a75a;
+    margin-bottom:70px;
+}
+
+/* BENEFIT CARDS */
+
+.benefits-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.benefit-card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:28px;
+    padding:40px 30px;
+    text-align:center;
+    transition:.4s;
+}
+
+.benefit-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.benefit-icon{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.benefit-card h3{
+    color:#fff;
+    margin-bottom:15px;
+}
+
+.benefit-card p{
+    color:rgba(255,255,255,.8);
+}
+
+/* PROCESS */
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.process-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(15px);
+    border-radius:24px;
+    padding:35px;
+    text-align:center;
+    transition:.4s;
+}
+
+.process-card:hover{
+    transform:translateY(-10px);
+}
+
+.process-card span{
+    width:65px;
+    height:65px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto auto 20px;
+    border-radius:50%;
+    background:#e7a75a;
+    color:#111;
+    font-size:24px;
+    font-weight:700;
+}
+
+.process-card h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.process-card p{
+    color:rgba(255,255,255,.75);
+}
+
+/* PERKS */
+
+.perks-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.perk-card{
+    text-align:center;
+    padding:45px 25px;
+    border-radius:28px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.1);
+    font-size:48px;
+    transition:.4s;
+}
+
+.perk-card:hover{
+    transform:translateY(-12px);
+}
+
+.perk-card h3{
+    color:#fff;
+    margin-top:20px;
+    font-size:24px;
+}
+
+.perk-card p{
+    color:rgba(255,255,255,.75);
+    font-size:16px;
+    line-height:1.8;
+}
+
+/* PREMIUM SECTION */
+
+.hr-section .container{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(20px);
+    border-radius:35px;
+    padding:60px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.hr-section h2{
+    font-size:58px;
+    color:#e7a75a;
+}
+
+.hr-section h3{
+    color:#fff;
+}
+
+.hr-section p,
+.hr-section li{
+    color:rgba(255,255,255,.85);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .benefits-section h2,
+    .process-section h2,
+    .perks-section h2,
+    .hr-section h2{
+        font-size:36px;
+    }
+
+    .about-hero .hero-text h1{
+        font-size:48px;
+    }
+
+    .hr-section .container{
+        padding:35px;
+    }
+
 }
