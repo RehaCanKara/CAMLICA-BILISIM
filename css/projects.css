@@ -44,7 +44,7 @@ html, body {
 .project-glass {
   position: relative;
   height: 320px;
-  border-radius: 80px;
+  border-radius: 50px;
   overflow: hidden;
   cursor: pointer;
   background: #e7a75a;
@@ -290,42 +290,6 @@ html, body {
   width: 150px;
   margin-bottom: 20px;
 }
-
-/* ================= HEADER MENU ================= */
-
-.hero-header {
-  position: fixed;
-  top: 40px;
-  left: 40px;
-  z-index: 50;
-}
-
-.hamburger {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  cursor: pointer;
-}
-
-.hamburger .lines {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.hamburger .lines span {
-  width: 28px;
-  height: 3px;
-  background: #e7a75a;
-}
-
-.menu-text {
-  font-size: 16px;
-  letter-spacing: 2px;
-  color: #e7a75a;
-  animation: menuPulse 2.8s infinite;
-}
-
 /* ===========================
    TOP HEADER
 =========================== */
@@ -437,25 +401,23 @@ html, body {
 /* ================= ABOUT HERO ================= */
 
 .about-hero {
-  min-height: 50vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10%;
-  background: transparent !important;
-  color: #fff;
-  overflow: hidden;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 140px 10% 20px;
+    text-align: center;
 }
 
 .about-hero .hero-text {
-  max-width: 600px;
+  max-width: 1000px;
   animation: fadeLeft 1s ease;
 }
 
 .about-hero .hero-text h1 {
   font-size: 72px;
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .about-hero .hero-text h1 span {

@@ -6,7 +6,6 @@
 
 body {
   margin: 0; /* Sayfanın kenarlarında boşluk bırakmamak için */
-  font-family: "Segoe UI", Arial, sans-serif; /* Yazı tipi */
   color: #f6f6f6; /* Genel yazı rengi */
 }
 
@@ -440,14 +439,12 @@ body {
 
 /* başlıkkkkk */
 .about-hero {
-  min-height: 40vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
-  background: transparent !important;
-  color: #fff;
-  overflow: hidden;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 140px 10% 0px;
+    text-align: center;
 }
 
 .about-hero .hero-text {
