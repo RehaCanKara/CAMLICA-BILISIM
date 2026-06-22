@@ -122,3 +122,34 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.4 });
 
 statBoxes.forEach(box => observer.observe(box));
+
+let lastScroll = 0;
+
+const header = document.querySelector(".top-header");
+
+window.addEventListener("scroll", () => {
+
+    const currentScroll = window.pageYOffset;
+
+    if(currentScroll <= 0){
+
+        header.classList.remove("hide");
+        return;
+    }
+
+    if(currentScroll > lastScroll){
+
+        // aşağı iniyor
+
+        header.classList.add("hide");
+
+    }else{
+
+        // yukarı çıkıyor
+
+        header.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+
+});

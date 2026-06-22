@@ -199,63 +199,98 @@ body {
   animation: menuPulse 2.8s infinite; /* Animasyon */
 }
 
-/* ================= OVERLAY MENU ================= */
+/* ===========================
+   TOP HEADER
+=========================== */
 
-.menu-overlay {
-  position: fixed; /* Sabit konum */
-  top: 0;
-  left: 0;
-  width: 20%; /* Genişlik %20 */
-  min-width: 220px; /* Minimum genişlik */
-  height: 100vh; /* Yükseklik 100vh */
-  background: rgba(20, 20, 20, 0.95); /* Koyu arka plan */
-  transform: translateX(-100%); /* Başlangıçta gizli */
-  transition: transform 0.4s ease; /* Geçiş animasyonu */
-  z-index: 1000; /* Üst katman sırası */
+.top-header{
+
+    position:fixed;
+    top:25px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:85%;
+    max-width:1400px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 35px;
+
+    background:rgba(35,45,60,.85);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    z-index:9999;
+
+     transition:
+    transform .4s ease,
+    top .4s ease;
+
+    z-index:9999;
 }
 
-.menu-overlay.active {
-  transform: translateX(0); /* Menü aktif olunca sağa kayar */
+.top-header.hide{
+
+    transform:
+    translate(-50%,-150%);
 }
 
-.menu-links a {
-  font-size: 32px; /* Link boyutu */
-  color: #fff; /* Yazı rengi beyaz */
-  opacity: 0; /* Başlangıçta şeffaf */
-  animation: menuFade 0.6s forwards; /* Menü animasyonu */
-  text-decoration: none !important; /* Alt çizgi kaldırıldı */
+.logo-area{
+
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
 
-.menu-panel {
-  width: 32%; /* Genişlik %32 */
-  max-width: 420px; /* Maksimum genişlik */
-  min-width: 280px; /* Minimum genişlik */
-  height: auto; /* Yükseklik otomatik */
-  margin: auto; /* Ortalamak için */
-  padding: 60px 40px; /* İç padding */
-  background: rgba(20, 20, 20, 0.85); /* Koyu arka plan */
-  border-radius: 24px; /* Köşe yuvarlama */
-  text-align: center; /* Metin ortalanacak */
-  animation: menuPanelIn 0.45s ease forwards; /* Menü paneli animasyonu */
+.logo-area img{
+
+    width:65px;
+    height:auto;
 }
 
-.menu-close {
-  position: absolute; /* Konumlandırma */
-  top: 30px; /* Üstten 30px */
-  right: 40px; /* Sağdan 40px */
-  font-size: 36px; /* Yazı boyutu */
-  color: #fff; /* Yazı rengi beyaz */
-  cursor: pointer; /* Tıklanabilir işareti */
+.logo-text h2{
+
+    color:#e7a75a;
+    font-size:36px;
+    line-height:1;
+    margin: 0 auto;
 }
 
-.menu-links {
-  display: flex; /* Flexbox düzeni */
-  flex-direction: column; /* Dikey sıralama */
-  gap: 22px; /* Elemanlar arası boşluk */
+.logo-text span{
+
+    color:#e7a75a;
+    letter-spacing:8px;
+    font-size:14px;
 }
 
-.menu-overlay.active .menu-links a {
-  animation: menuFade 0.6s forwards; /* Link animasyonu */
+.main-menu{
+
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+.main-menu a{
+
+    color:#fff;
+    text-decoration:none;
+
+    font-size:20px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.main-menu a:hover{
+
+    color:#e7a75a;
 }
 
 @keyframes menuFade {
