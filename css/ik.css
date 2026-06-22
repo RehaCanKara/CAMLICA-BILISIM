@@ -293,41 +293,6 @@ body {
     color:#e7a75a;
 }
 
-@keyframes menuFade {
-  from {
-    opacity: 0; /* Başlangıçta şeffaf */
-    transform: translateY(25px); /* Başlangıçta 25px aşağıda */
-  }
-  to {
-    opacity: 1; /* Bitişte opak */
-    transform: translateY(0); /* Normal pozisyon */
-  }
-}
-
-.menu-overlay.active .menu-links a:nth-child(1) { animation-delay: 0.1s; }
-.menu-overlay.active .menu-links a:nth-child(2) { animation-delay: 0.2s; }
-.menu-overlay.active .menu-links a:nth-child(3) { animation-delay: 0.3s; }
-.menu-overlay.active .menu-links a:nth-child(4) { animation-delay: 0.4s; }
-.menu-overlay.active .menu-links a:nth-child(5) { animation-delay: 0.5s; }
-
-@keyframes menuItemFade {
-  to {
-    opacity: 1; /* Opaklık 1 olacak */
-    transform: translateY(0); /* Normal pozisyonda olacak */
-  }
-}
-
-@keyframes menuPanelIn {
-  from {
-    opacity: 0; /* Başlangıçta şeffaf */
-    transform: scale(0.92); /* Başlangıçta biraz küçük */
-  }
-  to {
-    opacity: 1; /* Bitişte opak */
-    transform: scale(1); /* Bitişte normal boyutta */
-  }
-}
-
 .ik-page {
   min-height: 150vh; /* Sayfanın yüksekliği 100vh */
   background: 
